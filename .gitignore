@@ -1,3 +1,5 @@
 #Ignore the cache directory
 packer_cache
 output-virtualbox*
+#Vagrant base boxes
+*.box
