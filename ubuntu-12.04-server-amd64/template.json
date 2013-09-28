@@ -2,10 +2,29 @@
   "provisioners": [
     {
       "type": "shell",
+      "only": ["virtualbox"],
       "scripts": [
         "scripts/base.sh",
         "scripts/vagrant.sh",
         "scripts/virtualbox.sh",
+        "scripts/cleanup.sh",
+        "scripts/zerodisk.sh"
+      ],
+      "override": {
+        "virtualbox": {
+          "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
+        },
+        "vmware": {
+          "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
+        }
+      }
+    },
+    {
+      "type": "shell",
+      "only": ["vmware"],
+      "scripts": [
+        "scripts/base.sh",
+        "scripts/vagrant.sh",
         "scripts/vmfusion.sh",
         "scripts/cleanup.sh",
         "scripts/zerodisk.sh"
