@@ -2,7 +2,7 @@
 packer_cache/
 
 #Ignore VirtualBox output folders and their contents
-output-virtualbox/
+output-virtualbox*
 
 #Ignore Vagrant base boxes that are made
 *.box
