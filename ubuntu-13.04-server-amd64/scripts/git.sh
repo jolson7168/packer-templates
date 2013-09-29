@@ -9,3 +9,7 @@ cd git-1.8.4/
 ./configure
 #Compile it and put it into /usr/local
 sudo make prefix=/usr/local all; sudo make prefix=/usr/local install
+
+#remove the source code and tarball so they don't take up space in the final, packaged VM
+cd /tmp
+rm -rf /tmp/git-1.8.4/ /tmp/git-1.8.4.tar.gz
