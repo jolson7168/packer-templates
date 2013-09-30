@@ -1,6 +1,36 @@
 {
   "provisioners": [
     {
+      "type": "file",
+      "source": "files/gitconfig",
+      "destination": "/tmp/"
+    },
+    {
+      "type": "file",
+      "source": "files/gitignore_global",
+      "destination": "/tmp/"
+    },
+    {
+      "type": "file",
+      "source": "files/root-zsh-theme.zsh-theme",
+      "destination": "/tmp/"
+    },
+    {
+      "type": "file",
+      "source": "files/root-zshrc",
+      "destination": "/tmp/"
+    },
+    {
+      "type": "file",
+      "source": "files/vagrant-zsh-theme.zsh-theme",
+      "destination": "/tmp/"
+    },
+    {
+      "type": "file",
+      "source": "files/vagrant-zshrc",
+      "destination": "/tmp/"
+    },
+    {
       "type": "shell",
       "scripts": [
         "scripts/build_time.sh",
