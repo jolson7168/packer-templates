@@ -10,3 +10,5 @@ su - vagrant -c 'cd ~/.oh-my-zsh/custom/plugins'
 su - vagrant -c 'git clone git://github.com/zsh-users/zsh-history-substring-search.git'
 #syntax highlighting
 su - vagrant -c 'git clone git://github.com/zsh-users/zsh-syntax-highlighting.git'
+
+#cat the uploaded vagrant .zshrc into the /home/vagrant/.zshrc file
