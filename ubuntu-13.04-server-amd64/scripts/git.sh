@@ -13,3 +13,9 @@ sudo make prefix=/usr/local all; sudo make prefix=/usr/local install
 #remove the source code and tarball so they don't take up space in the final, packaged VM
 cd /tmp
 rm -rf /tmp/git-1.8.4/ /tmp/git-1.8.4.tar.gz
+
+su - vagrant -c '/tmp/gitconfig > /home/vagrant/.gitconfig'
+su - vagrant -c '/tmp/gitignore_global > /home/vagrant/.gitignore_global'
+
+su - vagrant -c '/tmp/gitconfig > /root/.gitconfig'
+su - vagrant -c '/tmp/gitignore_global > /root/.gitignore_global'
