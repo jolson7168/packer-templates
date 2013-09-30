@@ -1,0 +1,58 @@
+[user]
+  name = sysadmin
+  email = sysadmin@company.com
+[core]
+  excludesfile = ~/.gitignore_global
+  editor = /usr/local/bin/emacs
+  [push]
+  default = simple
+
+[alias]
+  #Staging and unstaging aliases
+  unstage = reset HEAD
+
+  #Add colors to the regular diff; the extras are just for the typos I always make
+  cdiff = diff --color-words
+  cid = diff --color-words
+  cidff = diff --color-words	
+  cdif = diff --color-words
+
+  #diffs of staged changes (extra aliases are to catch typos)
+  sdiff = diff --color-words --staged
+
+
+  #diff of staged and unstaged changes
+  diffall = diff HEAD --color-words
+
+  #log with tons of colors and author/date info; dlog for deluxe log
+  dlog = log --color=always --pretty='format:%Cgreen%h%Creset %s%Cred%d%Creset %C(black bold)(by %an on %ad)%Creset' --date=short --decorate --all
+
+  #graphical log with tons of colors
+  glog = log --graph --color=always --pretty='format:%Cgreen%h%Creset %C(blue)%cr%C(reset) %s%Cred%d%Creset %C(black bold)(by %an)%Creset' --date=short --decorate --all
+
+  #git status
+  stat = status
+
+[color]
+  ui = true
+  branch = true
+  diff = true
+  status = true
+
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+
+[color "diff"]
+  meta = blue black bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+
+[merge]
