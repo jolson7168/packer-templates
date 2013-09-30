@@ -8,6 +8,10 @@
         "scripts/vbox.sh",
         "scripts/sudo.sh",
         "scripts/vagrant.sh",
+        "scripts/zsh.sh",
+        "scripts/git.sh",
+        "scripts/vagrant_zsh.sh",
+        "scripts/root_zsh.sh",
         "scripts/cleanup.sh"
       ],
       "override": {
