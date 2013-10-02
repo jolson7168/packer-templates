@@ -1,6 +1,24 @@
 {
   "provisioners": [
     {
+      "type": "shell",
+      "scripts": [
+        "scripts/build_time.sh",
+        "scripts/apt.sh",
+        "scripts/vbox.sh",
+        "scripts/sudo.sh",
+        "scripts/vagrant.sh",
+        "scripts/zsh.sh",
+
+        "scripts/cleanup.sh"
+      ],
+      "override": {
+        "virtualbox": {
+          "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
+        }
+      }
+    },
+    {
       "type": "file",
       "source": "files/gitconfig",
       "destination": "/tmp/"
@@ -9,6 +27,14 @@
       "type": "file",
       "source": "files/gitignore_global",
       "destination": "/tmp/"
+    },
+    {
+      "type": "shell",
+      "script": "scripts/git.sh"
+    },
+    {
+      "type": "shell",
+      "script": "scripts/zsh.sh"
     },
     {
       "type": "file",
@@ -26,29 +52,16 @@
       "destination": "/tmp/"
     },
     {
+      "type": "shell",
+      "scripts": [
+        "scripts/vagrant_zsh.sh",
+        "scripts/root_zsh.sh"
+      ]
+    },
+    {
       "type": "file",
       "source": "files/vagrant-zshrc",
       "destination": "/tmp/"
-    },
-    {
-      "type": "shell",
-      "scripts": [
-        "scripts/build_time.sh",
-        "scripts/apt.sh",
-        "scripts/vbox.sh",
-        "scripts/sudo.sh",
-        "scripts/vagrant.sh",
-        "scripts/zsh.sh",
-        "scripts/git.sh",
-        "scripts/vagrant_zsh.sh",
-        "scripts/root_zsh.sh",
-        "scripts/cleanup.sh"
-      ],
-      "override": {
-        "virtualbox": {
-          "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
-        }
-      }
     }
   ],
   "builders": [
