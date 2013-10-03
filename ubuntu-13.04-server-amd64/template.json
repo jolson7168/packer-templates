@@ -7,8 +7,7 @@
         "scripts/apt.sh",
         "scripts/vbox.sh",
         "scripts/sudo.sh",
-        "scripts/vagrant.sh",
-        "scripts/zsh.sh"
+        "scripts/vagrant.sh"
       ],
       "override": {
         "virtualbox": {
@@ -30,10 +29,7 @@
       "type": "shell",
       "script": "scripts/git.sh"
     },
-    {
-      "type": "shell",
-      "script": "scripts/zsh.sh"
-    },
+
     {
       "type": "file",
       "source": "files/root-zsh-theme.zsh-theme",
@@ -50,16 +46,17 @@
       "destination": "/tmp/"
     },
     {
-      "type": "shell",
-      "scripts": [
-        "scripts/vagrant_zsh.sh",
-        "scripts/root_zsh.sh"
-      ]
-    },
-    {
       "type": "file",
       "source": "files/vagrant-zshrc",
       "destination": "/tmp/"
+    },
+    {
+      "type": "shell",
+      "scripts": [
+        "scripts/zsh.sh",
+        "scripts/vagrant_zsh.sh",
+        "scripts/root_zsh.sh"
+      ]
     },
     {
       "type": "shell",
