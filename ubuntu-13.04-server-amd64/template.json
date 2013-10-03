@@ -18,12 +18,12 @@
     {
       "type": "file",
       "source": "files/gitconfig",
-      "destination": "/tmp/"
+      "destination": "/tmp/gitconfig"
     },
     {
       "type": "file",
       "source": "files/gitignore_global",
-      "destination": "/tmp/"
+      "destination": "/tmp/gitignore_global"
     },
     {
       "type": "shell",
@@ -33,22 +33,22 @@
     {
       "type": "file",
       "source": "files/root-zsh-theme.zsh-theme",
-      "destination": "/tmp/"
+      "destination": "/tmp/root-zsh-theme.zsh-theme"
     },
     {
       "type": "file",
       "source": "files/root-zshrc",
-      "destination": "/tmp/"
+      "destination": "/tmp/root-zshrc"
     },
     {
       "type": "file",
       "source": "files/vagrant-zsh-theme.zsh-theme",
-      "destination": "/tmp/"
+      "destination": "/tmp/vagrant-zsh-theme.zsh-theme"
     },
     {
       "type": "file",
       "source": "files/vagrant-zshrc",
-      "destination": "/tmp/"
+      "destination": "/tmp/vagrant-zshrc"
     },
     {
       "type": "shell",
