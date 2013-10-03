@@ -8,9 +8,7 @@
         "scripts/vbox.sh",
         "scripts/sudo.sh",
         "scripts/vagrant.sh",
-        "scripts/zsh.sh",
-
-        "scripts/cleanup.sh"
+        "scripts/zsh.sh"
       ],
       "override": {
         "virtualbox": {
@@ -62,6 +60,10 @@
       "type": "file",
       "source": "files/vagrant-zshrc",
       "destination": "/tmp/"
+    },
+    {
+      "type": "shell",
+      "script": "scripts/cleanup.sh"
     }
   ],
   "builders": [
