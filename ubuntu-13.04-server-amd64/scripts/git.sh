@@ -1,5 +1,5 @@
+#!/bin/sh -x
 #Install some prerequisites for git from apt so we don't have to hunt them down manually
-
 sudo apt-get -y install build-essential gettext libcurl4-gnutls-dev libexpat1-dev
 
 cd /tmp
