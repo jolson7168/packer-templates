@@ -14,8 +14,8 @@ make prefix=/usr/local all; make prefix=/usr/local install
 cd /tmp
 rm -rf /tmp/git-1.8.4/ /tmp/git-1.8.4.tar.gz
 
-su - vagrant -c 'cat /tmp/gitconfig > /home/vagrant/.gitconfig'
-su - vagrant -c 'cat /tmp/gitignore_global > /home/vagrant/.gitignore_global'
+su - vagrant -c 'touch /home/vagrant/.gitconfig; cat /tmp/gitconfig > /home/vagrant/.gitconfig'
+su - vagrant -c 'touch /home/vagrant/.gitignore_global; cat /tmp/gitignore_global > /home/vagrant/.gitignore_global'
 
-su - vagrant -c 'cat /tmp/gitconfig > /root/.gitconfig'
-su - vagrant -c 'cat /tmp/gitignore_global > /root/.gitignore_global'
+su - vagrant -c 'touch /root/.gitconfig; cat /tmp/gitconfig > /root/.gitconfig'
+su - vagrant -c 'touch/root/.gitignore_global ; cat /tmp/gitignore_global > /root/.gitignore_global'
