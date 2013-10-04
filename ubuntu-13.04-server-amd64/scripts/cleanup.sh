@@ -1,8 +1,3 @@
-apt-get -y autoremove
-
-dd if=/dev/zero of=/EMPTY bs=1M
-rm -f /EMPTY
-
 echo "cleaning up dhcp leases"
 rm /var/lib/dhcp/*
 
@@ -19,7 +14,6 @@ apt-get -y autoclean
 apt-get -y autoremove
 
 #zero out disk space. Replacing free space with 0s makes the drive more easily compressed
-
 cat /dev/zero > zero.fill;sync;sleep 1;sync;rm -f zero.fill
 
 dd if=/dev/zero of=/EMPTY bs=1M
