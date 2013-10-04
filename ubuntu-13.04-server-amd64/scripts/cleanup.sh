@@ -21,6 +21,8 @@ rm -rf /root/.rbenv/.git
 #apt cleanup
 echo "ECHO apt-get remove kernel headers"
 apt-get -y remove linux-headers-$(uname -r)
+echo "ECHO remove older kernel headers"
+dpkg -l 'linux-*' | sed '/^ii/!d;/'"$(uname -r | sed "s/\(.*\)-\([^0-9]\+\)/\1/")"'/d;s/^[^ ]* [^ ]* \([^ ]*\).*/\1/;/[0-9]/!d' | xargs sudo apt-get -y purge
 echo "ECHO apt-get clean"
 apt-get -y clean
 echo "ECHO apt-get autoclean"
