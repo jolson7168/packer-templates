@@ -19,13 +19,13 @@ rm -rf /home/vagrant/.rbenv/.git
 rm -rf /root/.rbenv/.git
 
 #apt cleanup
-echo "apt-get remove kernel headers"
+echo "ECHO apt-get remove kernel headers"
 apt-get -y remove linux-headers-$(uname -r)
-echo "apt-get clean"
+echo "ECHO apt-get clean"
 apt-get -y clean
-echo "apt-get autoclean"
+echo "ECHO apt-get autoclean"
 apt-get -y autoclean
-echo "apt-get auto-remove"
+echo "ECHO apt-get auto-remove"
 apt-get -y autoremove
 
 echo "pre-up sleep 2" >> /etc/network/interfaces
