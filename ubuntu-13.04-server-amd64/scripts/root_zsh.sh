@@ -20,6 +20,6 @@ su - root -c 'cat /tmp/root-zsh-theme.zsh-theme > /root/.oh-my-zsh/themes/root-z
 #Install Vim Janus
 
 #Install rbenv and some plugins
-su - root -c 'cd /root/.rbenv/plugins; git clone git://github.com/sstephenson/rbenv.git .rbenv'
-su - root -c 'cd /root/.rbenv/plugins; mkdir -p /root/.rbenv/plugins'
+su - root -c 'git clone git://github.com/sstephenson/rbenv.git /root/.rbenv'
+su - root -c 'mkdir -p /root/.rbenv/plugins'
 su - root -c 'cd /root/.rbenv/plugins; git clone git://github.com/sstephenson/ruby-build.git'
