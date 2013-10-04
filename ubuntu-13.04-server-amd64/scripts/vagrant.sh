@@ -1,3 +1,4 @@
+#!/bin/sh -x
 mkdir /home/vagrant/.ssh
 chmod 700 /home/vagrant/.ssh
 cd /home/vagrant/.ssh

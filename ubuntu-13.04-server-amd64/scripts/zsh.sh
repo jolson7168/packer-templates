@@ -1,3 +1,4 @@
+#!/bin/sh -x
 cd /tmp
 wget http://sourceforge.net/projects/zsh/files/zsh/5.0.2/zsh-5.0.2.tar.gz
 tar zxvf zsh-5.0.2.tar.gz

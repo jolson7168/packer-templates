@@ -1,3 +1,4 @@
+#!/bin/sh -x
 #Add this variable so keyboard stuff isn't wonky
 su - root -c 'echo "DEBIAN_PREVENT_KEYBOARD_CHANGES=yes" > /root/.zshenv'
 

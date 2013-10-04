@@ -1,3 +1,4 @@
+#!/bin/sh -x
 # Without libdbus virtualbox would not start automatically after compile
 apt-get -y install --no-install-recommends libdbus-1-3
 
