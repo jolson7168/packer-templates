@@ -8,12 +8,12 @@ mkdir /etc/udev/rules.d/70-persistent-net.rules
 rm -rf /dev/.udev/
 rm /lib/udev/rules.d/75-persistent-net-generator.rules
 
-#Remove oh-my-zsh git repo histories; keep the current code checkout. We want oh-my-zsh but not the whole git repo's history
+#Remove oh-my-zsh git repo histories to save space; keep the current code checkout. We want oh-my-zsh but not the whole git repo's history
 
 rm -rf /home/vagrant/.oh-my-zsh/.git
 rm -rf /root/.oh-my-zsh/.git
 
-#Remove rbenv git repo histories; keep the current code checkout. We want rbenv but not the whole git repo's history
+#Remove rbenv git repo histories to save space; keep the current code checkout. We want rbenv but not the whole git repo's history
 
 rm -rf /home/vagrant/.rbenv/.git
 rm -rf /root/.rbenv/.git
