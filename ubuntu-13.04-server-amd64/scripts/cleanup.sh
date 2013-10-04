@@ -13,11 +13,13 @@ apt-get -y clean
 apt-get -y autoclean
 apt-get -y autoremove
 
+echo "pre-up sleep 2" >> /etc/network/interfaces
+exit
+
 #zero out disk space. Replacing free space with 0s makes the drive more easily compressed
 cat /dev/zero > zero.fill;sync;sleep 1;sync;rm -f zero.fill
 
 dd if=/dev/zero of=/EMPTY bs=1M
 rm -f /EMPTY
 
-echo "pre-up sleep 2" >> /etc/network/interfaces
-exit
+
