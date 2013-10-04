@@ -27,9 +27,13 @@
     },
     {
       "type": "shell",
-      "script": "scripts/git.sh"
+      "script": "scripts/git.sh",
+      "override": {
+        "virtualbox": {
+          "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
+        }
+      }       
     },
-
     {
       "type": "file",
       "source": "files/root-zsh-theme.zsh-theme",
@@ -56,11 +60,21 @@
         "scripts/zsh.sh",
         "scripts/vagrant_zsh.sh",
         "scripts/root_zsh.sh"
-      ]
+      ],
+      "override": {
+        "virtualbox": {
+          "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
+        }
+      }
     },
     {
       "type": "shell",
-      "script": "scripts/cleanup.sh"
+      "script": "scripts/cleanup.sh",
+      "override": {
+        "virtualbox": {
+          "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
+        }
+      }      
     }
   ],
   "builders": [
