@@ -1,6 +1,6 @@
 #!/bin/sh -x
 #Add this variable so keyboard stuff isn't wonky
-su - vagrant -c 'echo "DEBIAN_PREVENT_KEYBOARD_CHANGES=yes" > /root/.zshenv'
+su - vagrant -c 'echo "DEBIAN_PREVENT_KEYBOARD_CHANGES=yes" > /home/vagrant/.zshenv'
 
 #install oh-my-zsh first
 su - vagrant -c 'curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh'
