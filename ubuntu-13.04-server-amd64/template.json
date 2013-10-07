@@ -68,7 +68,8 @@
         "scripts/apt.sh",
         "scripts/vbox.sh",
         "scripts/sudo.sh",
-        "scripts/vagrant.sh"
+        "scripts/vagrant.sh",
+        "scripts/base.sh"
       ],
       "override": {
         "virtualbox": {
