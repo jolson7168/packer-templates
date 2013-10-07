@@ -7,6 +7,9 @@ rm -rf VBoxGuestAdditions_*.iso
 sed -i /HWADDR/d /etc/sysconfig/network-scripts/ifcfg-eth0
 rm /etc/udev/rules.d/70-persistent-net.rules
 
+#Empty out log files, but don't delete them
+find /var/log -type f | while read f; do echo -ne '' > $f; done;
+
 # Zero out the free space to save space in the final image:
 cat /dev/zero > zero.fill;sync;sleep 1;sync;rm -f zero.fill
 
