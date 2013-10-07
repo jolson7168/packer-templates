@@ -74,6 +74,18 @@
     },
     {
       "type": "shell",
+      "script": "scripts/vim.sh",
+      "override": {
+        "virtualbox": {
+          "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
+        },
+        "vmware": {
+          "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
+        }
+      }
+    },
+    {
+      "type": "shell",
       "script": "scripts/cleanup.sh",
       "override": {
         "virtualbox": {
