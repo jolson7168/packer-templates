@@ -6,9 +6,19 @@
         "scripts/base.sh",
         "scripts/vagrant.sh",
         "scripts/virtualbox.sh",
-        "scripts/cleanup.sh",
-        "scripts/zerodisk.sh"
       ],
+      "override": {
+        "virtualbox": {
+          "execute_command": "echo 'veewee'|sudo -S sh '{{.Path}}'"
+        },
+        "vmware": {
+          "execute_command": "echo 'veewee'|sudo -S sh '{{.Path}}'"
+        }
+      }
+    },
+    {
+      "type": "shell",
+      "script": "scripts/cleanup.sh",
       "override": {
         "virtualbox": {
           "execute_command": "echo 'veewee'|sudo -S sh '{{.Path}}'"
