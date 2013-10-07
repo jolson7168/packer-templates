@@ -141,5 +141,11 @@
         "cpuid.coresPerSocket": "1"
       }
     }
+  ],
+  "post-processors": [
+    {
+      "type": "vagrant",
+      "output": "packer_centos-6.4-amd64_{{.Provider}}.box"
+    }
   ]
 }
