@@ -87,9 +87,6 @@ alias edithosts="sudo emacs /etc/hosts"
 #SSH config
 alias editsshconfig="emacs ~/.ssh/config"
 
-#alias for tmux re-attachment to sessions
-alias tmuxa="tmux attach-session"
-
 #system file editing shortcuts
 #hosts file
 alias edithosts="sudo nano /etc/hosts"
