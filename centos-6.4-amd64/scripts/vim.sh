@@ -1,5 +1,8 @@
 #!/bin/sh -x
 
+yum -y install ruby gems
+gem install rake
+
 #Install Janus for the 'vagrant' user (cd to vagrant's homedir first so we're in the right spot for the script to run)
 echo "Installing Vim Janus for the 'vagrant' user..."
 su - vagrant -c 'cd /home/vagrant; curl -Lo- https://bit.ly/janus-bootstrap | bash'
