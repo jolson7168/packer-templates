@@ -17,5 +17,5 @@ yum -y update
 yum -y install gcc make gcc-c++ kernel-devel-`uname -r` zlib-devel openssl-devel readline-devel sqlite-devel perl wget dkms nfs-utils
 
 #more packages
-yum -y install man vim nano emacs tmux htop tree git curl wget screen telnet mailx unzip
+yum -y install man nc vim nano emacs tmux htop tree git lsof curl wget screen telnet mailx unzip yum-utils rsync
 
