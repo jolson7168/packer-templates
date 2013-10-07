@@ -128,7 +128,7 @@
       "ssh_wait_timeout": "10000s",
       "shutdown_command": "echo 'shutdown -P now' > shutdown.sh; echo 'vagrant'|sudo -S sh 'shutdown.sh'",
       "vmx_data": {
-        "memsize": "2048",
+        "memsize": "1024",
         "numvcpus": "1",
         "cpuid.coresPerSocket": "1"
       }
