@@ -27,11 +27,12 @@ echo "Running apt-get clean..."
 apt-get -y clean
 echo "Running apt-get autoclean..."
 apt-get -y autoclean
+echo "Running apt-get remove..."
+apt-get -y remove
 echo "Running apt-get auto-remove..."
 apt-get -y autoremove
 
 echo "pre-up sleep 2" >> /etc/network/interfaces
-
 
 #zero out disk space. Replacing free space with 0s makes the drive more easily compressed
 ECHO "Zeroing out disk..."
