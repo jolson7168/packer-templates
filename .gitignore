@@ -6,3 +6,4 @@ output-virtualbox*
 
 #Ignore Vagrant base boxes that are made
 *.box
+*.box.*
