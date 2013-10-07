@@ -56,11 +56,7 @@
     },
     {
       "type": "shell",
-      "scripts": [
-        "scripts/zsh.sh",
-        "scripts/vagrant_zsh.sh",
-        "scripts/root_zsh.sh"
-      ],
+      "script": "scripts/zsh.sh",
       "override": {
         "virtualbox": {
           "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
