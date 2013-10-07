@@ -16,6 +16,10 @@ yum -y update
 
 yum -y install gcc make gcc-c++ kernel-devel-`uname -r` zlib-devel openssl-devel readline-devel sqlite-devel perl wget dkms nfs-utils
 
+#disable iptables
+chkconfig iptables off
+service iptables stop
+
 #more packages
 yum -y install man nc vim nano emacs tmux htop tree git lsof curl wget screen telnet mailx unzip yum-utils rsync
 
