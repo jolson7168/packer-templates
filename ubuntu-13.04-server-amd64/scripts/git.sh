@@ -18,4 +18,4 @@ cp /tmp/gitconfig /home/vagrant/.gitconfig
 cp /tmp/gitignore_global /home/vagrant/.gitignore_global
 
 cp /tmp/gitconfig /root/.gitconfig
-sudo cp /tmp/gitignore_global /root/.gitignore_global
+cp /tmp/gitignore_global /root/.gitignore_global
