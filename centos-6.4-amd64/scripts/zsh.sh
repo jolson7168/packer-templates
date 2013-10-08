@@ -12,6 +12,7 @@ sudo make
 sudo make install
 
 #Change the login shell to zsh for the vagrant and root users
+echo "/usr/local/bin/zsh" >> /etc/shells
 chsh -s `which zsh` vagrant
 chsh -s `which zsh` root
 
