@@ -11,11 +11,6 @@ cd zsh-5.0.2
 sudo make
 sudo make install
 
-#Change the login shell to zsh for the vagrant and root users
-echo "/usr/local/bin/zsh" >> /etc/shells
-chsh -s `which zsh` vagrant
-chsh -s `which zsh` root
-
 #Remove the tarball and tarball extract so they don't take up space in the final, packaged VM
 rm -rf /tmp/zsh-5.0.2/ /tmp/zsh-5.0.2.tar.gz
 
@@ -71,3 +66,8 @@ su - root -c 'cat /tmp/root-zsh-theme.zsh-theme > /root/.oh-my-zsh/themes/root-z
 su - root -c 'git clone git://github.com/sstephenson/rbenv.git /root/.rbenv'
 su - root -c 'mkdir -p /root/.rbenv/plugins'
 su - root -c 'cd /root/.rbenv/plugins; git clone git://github.com/sstephenson/ruby-build.git'
+
+#Change the login shell to zsh for the vagrant and root users
+echo "/usr/local/bin/zsh" >> /etc/shells
+chsh -s `which zsh` vagrant
+chsh -s `which zsh` root
