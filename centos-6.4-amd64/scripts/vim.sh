@@ -1,6 +1,6 @@
 #!/bin/sh -x
 
-yum -y install ruby gems
+yum -y install ruby rubygems
 gem install rake
 
 #Install Janus for the 'vagrant' user (cd to vagrant's homedir first so we're in the right spot for the script to run)
