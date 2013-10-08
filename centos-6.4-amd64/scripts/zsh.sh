@@ -29,13 +29,12 @@ su - vagrant -c 'curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/to
 mkdir -p /home/vagrant/.oh-my-zsh/custom/plugins
 cd /home/vagrant/.oh-my-zsh/custom/plugins
 #smarter history search
-git clone git://github.com/zsh-users/zsh-history-substring-search.git
+/usr/local/bin/git clone git://github.com/zsh-users/zsh-history-substring-search.git
 #syntax highlighting
-git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
+/usr/local/bin/git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
 
 #cat the uploaded vagrant .zshrc into the /home/vagrant/.zshrc file
 cat /tmp/vagrant-zshrc > /home/vagrant/.zshrc
-
 #cat in the uploaded ZSH theme
 cat /tmp/vagrant-zsh-theme.zsh-theme > /home/vagrant/.oh-my-zsh/themes/vagrant-zsh-theme.zsh-theme
 
