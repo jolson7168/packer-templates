@@ -16,7 +16,29 @@
           "execute_command": "echo 'vagrant'|sudo -S bash '{{.Path}}'"
         }
       }
-    }
+    },
+    {
+      "type": "file",
+      "source": "files/gitconfig",
+      "destination": "/tmp/gitconfig"
+    },
+    {
+      "type": "file",
+      "source": "files/gitignore_global",
+      "destination": "/tmp/gitignore_global"
+    },
+    {
+      "type": "shell",
+      "script": "scripts/git.sh",
+      "override": {
+        "virtualbox": {
+          "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
+        },
+        "vmware": {
+          "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
+        }
+      }       
+    }    
   ],
   "builders": [
     {
