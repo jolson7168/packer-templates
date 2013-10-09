@@ -38,7 +38,39 @@
           "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
         }
       }       
-    }    
+    },
+    {
+      "type": "file",
+      "source": "files/root-zsh-theme.zsh-theme",
+      "destination": "/tmp/root-zsh-theme.zsh-theme"
+    },
+    {
+      "type": "file",
+      "source": "files/root-zshrc",
+      "destination": "/tmp/root-zshrc"
+    },
+    {
+      "type": "file",
+      "source": "files/vagrant-zsh-theme.zsh-theme",
+      "destination": "/tmp/vagrant-zsh-theme.zsh-theme"
+    },
+    {
+      "type": "file",
+      "source": "files/vagrant-zshrc",
+      "destination": "/tmp/vagrant-zshrc"
+    },
+    {
+      "type": "shell",
+      "script": "scripts/zsh.sh",
+      "override": {
+        "virtualbox": {
+          "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
+        },
+        "vmware": {
+          "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
+        }
+      }
+    },
   ],
   "builders": [
     {
