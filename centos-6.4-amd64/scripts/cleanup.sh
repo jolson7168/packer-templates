@@ -1,7 +1,5 @@
 yum -y erase gtk2 libX11 hicolor-icon-theme avahi freetype bitstream-vera-fonts
-yum -y clean packages dbcache expire-cache metadata
 yum -y clean all
-
 #rm -rf /etc/yum.repos.d/{puppetlabs,epel}.repo
 rm -rf VBoxGuestAdditions_*.iso
 
@@ -24,9 +22,6 @@ sudo rm -rf /usr/share/locale/{af,am,ar,as,ast,az,bal,be,bg,bn,bn_IN,br,bs,byn,c
 
 #Empty out log files, but don't delete them
 find /var/log -type f | while read f; do echo -ne '' > $f; done;
-
-#Clean out some other folders
-rm -rf /var/tmp/*
 
 # Zero out the free space to save space in the final image:
 cat /dev/zero > zero.fill;sync;sleep 1;sync;rm -f zero.fill
