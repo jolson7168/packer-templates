@@ -68,5 +68,5 @@ su - root -c 'cd /root/.rbenv/plugins; git clone git://github.com/sstephenson/ru
 
 #Change the login shell to zsh for the vagrant and root users
 echo "/usr/local/bin/zsh" >> /etc/shells
-chsh -s `which zsh` vagrant
-chsh -s `which zsh` root
+chsh -s /usr/local/bin/zsh vagrant
+chsh -s /usr/local/bin/zsh root
