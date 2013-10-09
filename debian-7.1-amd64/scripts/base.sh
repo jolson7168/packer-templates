@@ -17,3 +17,7 @@ GRUB_CMDLINE_LINUX="debian-installer=en_US"
 EOF
 
 update-grub
+
+#Turn off iptables bly flushing its rules and stop it from starting when the system boots
+iptables -F
+update-rc.d -f iptables remove
