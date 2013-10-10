@@ -172,5 +172,11 @@
         "cpuid.coresPerSocket": "1"
       }
     }
+  ],
+  "post-processors": [
+    {
+      "type": "vagrant",
+      "output": "packer_debian-7.1-amd64_{{.Provider}}.box"
+    }
   ]
 }
