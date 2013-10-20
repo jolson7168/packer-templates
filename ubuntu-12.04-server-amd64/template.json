@@ -110,5 +110,10 @@
       }
     }
   ],
-  "post-processors": ["vagrant"]
+  "post-processors": [
+    {
+      "type": "vagrant",
+      "output": "packer_ubuntu-12.04-server-amd64_{{.Provider}}.box"
+    }
+  ]
 }
