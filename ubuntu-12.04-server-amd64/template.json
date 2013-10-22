@@ -4,7 +4,8 @@
       "type": "shell",
       "scripts": [
         "scripts/base.sh",
-        "scripts/vagrant.sh"
+        "scripts/vagrant.sh",
+        "scripts/apt.sh"
       ],
       "override": {
         "virtualbox": {
