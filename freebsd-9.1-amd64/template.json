@@ -1,20 +1,4 @@
 {
-  "provisioners": [
-    {
-      "type": "shell",
-      "scripts": [
-        "scripts/postinstall.csh"
-      ],
-      "override": {
-        "virtualbox": {
-          "execute_command": "cat '{{.Path}}' | su -"
-        },
-        "vmware": {
-          "execute_command": "cat '{{.Path}}' | su -"
-        }
-      }
-    }
-  ],
   "builders": [
     {
       "type": "virtualbox",
@@ -100,7 +84,23 @@
       }
     }
   ],
-   "post-processors": [
+  "provisioners": [
+    {
+      "type": "shell",
+      "scripts": [
+        "scripts/postinstall.csh"
+      ],
+      "override": {
+        "virtualbox": {
+          "execute_command": "cat '{{.Path}}' | su -"
+        },
+        "vmware": {
+          "execute_command": "cat '{{.Path}}' | su -"
+        }
+      }
+    }
+  ],
+  "post-processors": [
     {
       "type": "vagrant",
       "output": "packer_freebsd-9.1-amd64_{{.Provider}}.box"
