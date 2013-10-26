@@ -18,5 +18,5 @@ cd ../ubuntu-13.10-server-amd64
 packer build --only=virtualbox template.json
 
 #FreeBSD 9.1
-cd ../freebsd-9.1-amd64
-packer build --only=virtualbox template.json
+#cd ../freebsd-9.1-amd64
+#packer build --only=virtualbox template.json
