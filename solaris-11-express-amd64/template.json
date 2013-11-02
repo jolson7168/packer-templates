@@ -1,0 +1,115 @@
+{
+  "provisioners": [
+    {
+      "type": "shell",
+      "scripts": [
+        "scripts/postinstall.sh"
+      ],
+      "override": {
+        "virtualbox": {
+          "execute_command": "echo 'vagrant'|sudo -S bash ./{{.Path}}"
+        },
+        "vmware": {
+          "execute_command": "echo 'vagrant'|sudo -S bash ./{{.Path}}"
+        }
+      }
+    }
+  ],
+  "builders": [
+    {
+      "type": "virtualbox",
+      "boot_command": [
+        "e<wait>",
+        "e<wait>",
+        "<Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><wait>",
+        "false<wait>",
+        "<enter><wait>",
+        "b<wait>",
+        "<wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait>",
+        "root<enter><wait><wait>",
+        "solaris<enter><wait><wait>",
+        "while (true); do sleep 5; test -f /a/etc/sudoers  && grep -v \"vagrant\" \"/a/etc/sudoers\" 2> /dev/null<wait>",
+        " && echo \"vagrant ALL=(ALL) NOPASSWD: ALL\" >> /a/etc/sudoers && break ; done &<enter><wait>",
+        "<enter>while (true); do grep \"You may wish to reboot\" \"/tmp/install_log\" 2> /dev/null<wait>",
+        " && reboot; sleep 10; done &<enter><wait>",
+        "sleep 5; curl http://{{ .HTTPIP }}:{{ .HTTPPort }}/default.xml -o default.xml;<wait>",
+        "cp default.xml /tmp/ai_combined_manifest.xml;<wait>",
+        "svcadm enable svc:/application/auto-installer:default;<wait>",
+        "sleep 3; tail -f /tmp/install_log<enter><wait>"
+      ],
+      "boot_wait": "10s",
+      "disk_size": 15140,
+      "guest_os_type": "OpenSolaris",
+      "http_directory": "http",
+      "iso_checksum": "36527d4d49a645ef6f6d2677c8e0118c",
+      "iso_checksum_type": "md5",
+      "iso_url": "",
+      "ssh_username": "vagrant",
+      "ssh_password": "vagrant",
+      "ssh_port": 22,
+      "ssh_wait_timeout": "10000s",
+      "shutdown_command": "echo '/usr/sbin/halt' > shutdown.sh; echo 'vagrant'|sudo -S bash ./shutdown.sh",
+      "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
+      "virtualbox_version_file": ".vbox_version",
+      "vboxmanage": [
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--memory",
+          "768"
+        ],
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--cpus",
+          "1"
+        ],
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--hwvirtex",
+          "on"
+        ]
+      ]
+    },
+    {
+      "type": "vmware",
+      "boot_command": [
+        "e<wait>",
+        "e<wait>",
+        "<Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><Backspace><wait>",
+        "false<wait>",
+        "<enter><wait>",
+        "b<wait>",
+        "<wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait><wait>",
+        "root<enter><wait><wait>",
+        "solaris<enter><wait><wait>",
+        "while (true); do sleep 5; test -f /a/etc/sudoers  && grep -v \"vagrant\" \"/a/etc/sudoers\" 2> /dev/null<wait>",
+        " && echo \"vagrant ALL=(ALL) NOPASSWD: ALL\" >> /a/etc/sudoers && break ; done &<enter><wait>",
+        "<enter>while (true); do grep \"You may wish to reboot\" \"/tmp/install_log\" 2> /dev/null<wait>",
+        " && reboot; sleep 10; done &<enter><wait>",
+        "sleep 5; curl http://{{ .HTTPIP }}:{{ .HTTPPort }}/default.xml -o default.xml;<wait>",
+        "cp default.xml /tmp/ai_combined_manifest.xml;<wait>",
+        "svcadm enable svc:/application/auto-installer:default;<wait>",
+        "sleep 3; tail -f /tmp/install_log<enter><wait>"
+      ],
+      "boot_wait": "10s",
+      "disk_size": 15140,
+      "guest_os_type": "solaris10",
+      "http_directory": "http",
+      "iso_checksum": "36527d4d49a645ef6f6d2677c8e0118c",
+      "iso_checksum_type": "md5",
+      "iso_url": "",
+      "ssh_username": "vagrant",
+      "ssh_password": "vagrant",
+      "ssh_port": 22,
+      "ssh_wait_timeout": "10000s",
+      "shutdown_command": "echo '/usr/sbin/halt' > shutdown.sh; echo 'vagrant'|sudo -S bash ./shutdown.sh",
+      "vmx_data": {
+        "memsize": "768",
+        "numvcpus": "1",
+        "cpuid.coresPerSocket": "1"
+      }
+    }
+  ]
+}
