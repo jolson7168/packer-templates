@@ -7,3 +7,8 @@ apt-get -y install dkms
 apt-get -y install nfs-common
 apt-get -y install --no-install-recommends rake
 apt-get -y install tmux emacs nano curl vim tree htop smartmontools mosh inotify-tools zerofree software-properties-common ncdu
+
+#Add the apt repo for ag and install it
+apt-add-repository ppa:mizuno-as/silversearcher-ag
+apt-get update
+apt-get install silversearcher-ag
