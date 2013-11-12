@@ -34,9 +34,6 @@ DISABLE_AUTO_UPDATE="true"
 #Source /etc/profile to get the environment variables and things in it
 source /etc/profile
 
-#Source /etc/profile to get the environment variables and things in it
-source /etc/profile
-
 #source oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
