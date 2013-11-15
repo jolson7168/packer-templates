@@ -27,7 +27,7 @@ There are 2 shell scripts, `virtualbox_vm_build_all.sh` and `old_virtualbox_vm_b
 
 ###.gitignore
 
-This repo has a `.gitignore` so that ISOs, temporary and cached files created by Packer and finished outfiles are not tracked by git:
+This repo has a `.gitignore` so that ISOs, temporary and cached files created by Packer and finished output files are not tracked by git:
 
 <pre>
 #Ignore cache folders
