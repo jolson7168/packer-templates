@@ -149,6 +149,28 @@
       }
     },
     {
+      "type": "file",
+      "source": "files/vagrant_bash_profile",
+      "destination": "/tmp/vagrant_bash_profile"
+    },
+    {
+      "type": "file",
+      "source": "files/root_bash_profile",
+      "destination": "/tmp/root_bash_profile"
+    },
+    {
+      "type": "shell",
+      "script": "scripts/bash.sh",
+      "override": {
+        "virtualbox": {
+          "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
+        },
+        "vmware": {
+          "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
+        }
+      }
+    },
+    {
       "type": "shell",
       "script": "scripts/vim.sh",
       "override": {
