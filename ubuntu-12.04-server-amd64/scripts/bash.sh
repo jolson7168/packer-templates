@@ -7,6 +7,3 @@ su - root -c 'cat /tmp/vagrant_bash_profile >> /home/vagrant/.bash_profile'
 su - root -c 'cat /tmp/root_bash_profile >> /root/.bash_profile'
 #...and cat it into .bashrc so it's applied to non-login shells as well:
 su - root -c 'cat /tmp/root_bash_profile >> /root/.bashrc'
-
-
-
