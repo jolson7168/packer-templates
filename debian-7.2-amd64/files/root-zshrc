@@ -199,16 +199,9 @@ ZSH_HIGHLIGHT_STYLES[double-quoted-argument]='fg=cyan'
 ZSH_HIGHLIGHT_STYLES[cursor]='none'
 ZSH_HIGHLIGHT_STYLES[builtin]='cyan'
 
-#ZSH_HIGHLIGHT_STYLES[]=''
-
 
 #################################
 # Other sourced stuff
 #################################
 
-#################################
-# Junk from older versions in case I need it again
-#################################
-
-export LESS='-R'
-export LESSOPEN='|~/.lessfilter %s'
+#Other stuff can be added here as needed.
