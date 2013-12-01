@@ -4,8 +4,8 @@
 cd ./debian-7.2-amd64
 packer build --only=virtualbox template.json
 
-#CentOS 6.4
-cd ../centos-6.4-amd64
+#CentOS 6.5
+cd ../centos-6.5-amd64
 packer build --only=virtualbox template.json
 
 #Ubuntu 12.04: this template is for an older version of Ubuntu, but 12.04 is the most recent LTS release
