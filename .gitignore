@@ -7,3 +7,12 @@ output-virtualbox*
 #Ignore Vagrant base boxes that are made
 *.box
 *.box.*
+
+#Ignore RPM and DEB packages and ZIP files that are used in the file provisioners
+**/files/*.zip
+**/files/*.rpm
+**/files/*.deb
+**/files/*.jar
+
+#Ignore ISO files
+**/*.iso
