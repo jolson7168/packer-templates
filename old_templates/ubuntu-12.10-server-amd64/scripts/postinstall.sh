@@ -71,6 +71,9 @@ wget --no-check-certificate 'https://raw.github.com/mitchellh/vagrant/master/key
 chmod 600 /home/vagrant/.ssh/authorized_keys
 chown -R vagrant /home/vagrant/.ssh
 
+#Don't do reverse DNS lookups of SSH clients that connect; this usually speeds up SSH by quite a bit:
+echo "UseDNS no" >> /etc/ssh/sshd_config
+
 # Remove items used for building, since they aren't needed anymore
 apt-get -y remove linux-headers-$(uname -r) build-essential
 apt-get -y autoremove

@@ -24,3 +24,5 @@ yum -y install man nc vim nano emacs tmux htop tree lsof curl wget screen telnet
 #Install ag
 rpm -Uvhi http://swiftsignal.com/packages/centos/6/x86_64/the-silver-searcher-0.14-1.el6.x86_64.rpm
 
+#Don't do reverse DNS lookups of SSH clients that connect; this usually speeds up SSH by quite a bit:
+echo "UseDNS no" >> /etc/ssh/sshd_config
