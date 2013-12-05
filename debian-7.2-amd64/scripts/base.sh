@@ -18,3 +18,6 @@ update-grub
 #Turn off iptables bly flushing its rules and stop it from starting when the system boots
 iptables -F
 update-rc.d -f iptables remove
+
+#Don't do reverse DNS lookups of SSH clients that connect; this usually speeds up SSH by quite a bit:
+echo "UseDNS no" >> /etc/ssh/sshd_config
