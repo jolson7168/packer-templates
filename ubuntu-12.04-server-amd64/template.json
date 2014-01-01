@@ -1,7 +1,7 @@
 { 
   "builders": [
     {
-      "type": "virtualbox",
+      "type": "virtualbox-iso",
       "boot_command": [
         "<esc><esc><enter><wait>",
         "/install/vmlinuz noapic preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed.cfg <wait>",
@@ -79,7 +79,7 @@
         "scripts/apt.sh"
       ],
       "override": {
-        "virtualbox": {
+        "virtualbox-iso": {
           "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
         },
         "vmware": {
@@ -89,10 +89,10 @@
     },
     {
       "type": "shell",
-      "only": ["virtualbox"],
+      "only": ["virtualbox-iso"],
       "script": "scripts/virtualbox.sh",
       "override": {
-        "virtualbox": {
+        "virtualbox-iso": {
           "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
         },
         "vmware": {
@@ -105,7 +105,7 @@
       "only": ["vmware"],
       "script": "scripts/vmfusion.sh",
       "override": {
-        "virtualbox": {
+        "virtualbox-iso": {
           "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
         },
         "vmware": {
@@ -127,7 +127,7 @@
       "type": "shell",
       "script": "scripts/git.sh",
       "override": {
-        "virtualbox": {
+        "virtualbox-iso": {
           "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
         },
         "vmware": {
@@ -159,7 +159,7 @@
       "type": "shell",
       "script": "scripts/zsh.sh",
       "override": {
-        "virtualbox": {
+        "virtualbox-iso": {
           "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
         },
         "vmware": {
@@ -181,7 +181,7 @@
       "type": "shell",
       "script": "scripts/bash.sh",
       "override": {
-        "virtualbox": {
+        "virtualbox-iso": {
           "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
         },
         "vmware": {
@@ -193,7 +193,7 @@
       "type": "shell",
       "script": "scripts/vim.sh",
       "override": {
-        "virtualbox": {
+        "virtualbox-iso": {
           "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
         },
         "vmware": {
@@ -208,7 +208,7 @@
         "scripts/zerodisk.sh"
       ],
       "override": {
-        "virtualbox": {
+        "virtualbox-iso": {
           "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
         },
         "vmware": {
