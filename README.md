@@ -18,7 +18,7 @@ By default, the JSON templates have a Vagrant post-processor that will create a 
 To build a **VirtualBox** VM, `cd` into a template's folder and run:
 
 <pre>
-packer build --only=virtualbox template.json
+packer build --only=virtualbox-iso template.json
 </pre>
 
 ####Building all VMs with the included scripts
