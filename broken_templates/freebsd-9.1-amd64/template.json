@@ -1,7 +1,7 @@
 {
   "builders": [
     {
-      "type": "virtualbox",
+      "type": "virtualbox-iso",
       "boot_command": [
         "<esc><wait>",
         "load geom_mbr<wait>",
@@ -91,7 +91,7 @@
         "scripts/postinstall.csh"
       ],
       "override": {
-        "virtualbox": {
+        "virtualbox-iso": {
           "execute_command": "cat '{{.Path}}' | su -"
         },
         "vmware": {

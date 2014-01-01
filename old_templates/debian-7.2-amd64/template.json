@@ -1,7 +1,7 @@
 {  
   "builders": [
     {
-      "type": "virtualbox",
+      "type": "virtualbox-iso",
       "boot_command": [
         "<esc><wait>",
         "install <wait>",
@@ -86,7 +86,7 @@
         "scripts/virtualbox.sh"
       ],
       "override": {
-        "virtualbox": {
+        "virtualbox-iso": {
           "execute_command": "echo 'vagrant'|sudo -S bash '{{.Path}}'"
         },
         "vmware": {
@@ -108,7 +108,7 @@
       "type": "shell",
       "script": "scripts/git.sh",
       "override": {
-        "virtualbox": {
+        "virtualbox-iso": {
           "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
         },
         "vmware": {
@@ -140,7 +140,7 @@
       "type": "shell",
       "script": "scripts/zsh.sh",
       "override": {
-        "virtualbox": {
+        "virtualbox-iso": {
           "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
         },
         "vmware": {
@@ -162,7 +162,7 @@
       "type": "shell",
       "script": "scripts/bash.sh",
       "override": {
-        "virtualbox": {
+        "virtualbox-iso": {
           "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
         },
         "vmware": {
@@ -174,7 +174,7 @@
       "type": "shell",
       "script": "scripts/vim.sh",
       "override": {
-        "virtualbox": {
+        "virtualbox-iso": {
           "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
         },
         "vmware": {
@@ -186,7 +186,7 @@
       "type": "shell",
       "script": "scripts/cleanup.sh",
       "override": {
-        "virtualbox": {
+        "virtualbox-iso": {
           "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
         },
         "vmware": {
