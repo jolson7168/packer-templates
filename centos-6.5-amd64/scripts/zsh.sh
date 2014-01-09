@@ -38,6 +38,12 @@ cat /tmp/vagrant-zshrc > /home/vagrant/.zshrc
 #cat in the uploaded ZSH theme
 cat /tmp/vagrant-zsh-theme.zsh-theme > /home/vagrant/.oh-my-zsh/themes/vagrant-zsh-theme.zsh-theme
 
+#Install rbenv and some plugins
+su - root -c 'git clone git://github.com/sstephenson/rbenv.git /home/vagrant/.rbenv'
+su - root -c 'mkdir -p /home/vagrant/.rbenv/plugins'
+su - root -c 'cd /home/vagrant/.rbenv/plugins; git clone git://github.com/sstephenson/ruby-build.git'
+
+
 ##############################
 # root ZSH setup stuff
 ##############################
