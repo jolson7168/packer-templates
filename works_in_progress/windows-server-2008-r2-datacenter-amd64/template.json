@@ -21,6 +21,7 @@
       "./scripts/uac_disable.ps1",
       "./scripts/allow_pings.ps1",
       "./scripts/vagrant-windows_setup.ps1",
+      "./scripts/windows_activation_extend.ps1",
       "./scripts/base.ps1",
       "./scripts/oracle-cert.cer"
     ],
@@ -50,6 +51,7 @@
       "./scripts/uac_disable.ps1",
       "./scripts/allow_pings.ps1",
       "./scripts/vagrant-windows_setup.ps1",
+      "./scripts/windows_activation_extend.ps1",
       "./scripts/base.ps1",
       "./scripts/oracle-cert.cer"
     ],
