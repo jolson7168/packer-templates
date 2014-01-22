@@ -17,9 +17,9 @@
     "vnc_port_max": 5980,
     "floppy_files": [
       "./answer_files/Autounattend.xml",
+      "./scripts/uac_disable.ps1",
       "./scripts/base.ps1",
       "./scripts/openssh.ps1",
-      "./scripts/uac_disable.ps1",
       "./scripts/allow_pings.ps1",
       "./scripts/vagrant-windows_setup.ps1",
       "./scripts/windows_activation_extend.ps1",
@@ -47,9 +47,9 @@
     "disk_size": 61440,
     "floppy_files": [
       "./answer_files/Autounattend.xml",
+      "./scripts/uac_disable.ps1",
       "./scripts/base.ps1",
       "./scripts/openssh.ps1",
-      "./scripts/uac_disable.ps1",
       "./scripts/allow_pings.ps1",
       "./scripts/vagrant-windows_setup.ps1",
       "./scripts/windows_activation_extend.ps1",
