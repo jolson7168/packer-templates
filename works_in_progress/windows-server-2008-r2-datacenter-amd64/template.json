@@ -18,6 +18,7 @@
     "floppy_files": [
       "./answer_files/Autounattend.xml",
       "./scripts/openssh.ps1",
+      "./scripts/base.ps1",
       "./scripts/oracle-cert.cer"
     ],
     "vmx_data": {
@@ -43,6 +44,7 @@
     "floppy_files": [
       "./answer_files/Autounattend.xml",
       "./scripts/openssh.ps1",
+      "./scripts/base.ps1",
       "./scripts/oracle-cert.cer"
     ],
     "vboxmanage": [
