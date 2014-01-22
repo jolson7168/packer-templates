@@ -17,8 +17,8 @@
     "vnc_port_max": 5980,
     "floppy_files": [
       "./answer_files/Autounattend.xml",
-      "./scripts/win-updates.ps1",
       "./scripts/openssh.ps1",
+      "./scripts/oracle-cert.cer"
     ],
     "vmx_data": {
       "RemoteDisplay.vnc.enabled": "false",
