@@ -1,8 +1,9 @@
 #Ignore cache folders
 packer_cache/
 
-#Ignore VirtualBox output folders and their contents
+#Ignore VirtualBox and VMWware output folders and their contents
 output-virtualbox*
+output-vmware*
 
 #Ignore Vagrant base boxes that are made
 *.box
