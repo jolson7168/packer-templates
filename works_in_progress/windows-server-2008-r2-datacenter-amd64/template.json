@@ -18,6 +18,7 @@
     "floppy_files": [
       "./answer_files/Autounattend.xml",
       "./scripts/openssh.ps1",
+      "./scripts/uac_disable.ps1",
       "./scripts/base.ps1",
       "./scripts/oracle-cert.cer"
     ],
@@ -44,6 +45,7 @@
     "floppy_files": [
       "./answer_files/Autounattend.xml",
       "./scripts/openssh.ps1",
+      "./scripts/uac_disable.ps1",
       "./scripts/base.ps1",
       "./scripts/oracle-cert.cer"
     ],
