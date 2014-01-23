@@ -9,7 +9,7 @@
         "virtualbox-iso": {
           "execute_command": "echo 'vagrant'|sudo -S bash ./{{.Path}}"
         },
-        "vmware": {
+        "vmware-iso": {
           "execute_command": "echo 'vagrant'|sudo -S bash ./{{.Path}}"
         }
       }
@@ -73,7 +73,7 @@
       ]
     },
     {
-      "type": "vmware",
+      "type": "vmware-iso",
       "boot_command": [
         "e<wait>",
         "e<wait>",

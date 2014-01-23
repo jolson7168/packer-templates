@@ -33,10 +33,20 @@ This repo has a `.gitignore` so that ISOs, temporary and cached files created by
 #Ignore cache folders
 packer_cache/
 
-#Ignore VirtualBox output folders and their contents
+#Ignore VirtualBox and VMWware output folders and their contents
 output-virtualbox*
+output-vmware*
 
 #Ignore Vagrant base boxes that are made
 *.box
 *.box.*
+
+#Ignore RPM and DEB packages and ZIP files that are used in the file provisioners
+**/files/*.zip
+**/files/*.rpm
+**/files/*.deb
+**/files/*.jar
+
+#Ignore ISO files
+**/*.iso
 </pre>

@@ -48,7 +48,7 @@
       ]
     },
     {
-      "type": "vmware",
+      "type": "vmware-iso",
       "boot_command": [
         "<esc><wait>",
         "load geom_mbr<wait>",
@@ -94,7 +94,7 @@
         "virtualbox-iso": {
           "execute_command": "cat '{{.Path}}' | su -"
         },
-        "vmware": {
+        "vmware-iso": {
           "execute_command": "cat '{{.Path}}' | su -"
         }
       }
