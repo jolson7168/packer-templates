@@ -1,7 +1,7 @@
 #packer-templates
 - - -
 
-This repo has several templates for the Packer machine image build tool. Templates for older operating systems (and older point releases for still-current OSes) are in `old_templates`.
+This repo has several templates for the [Packer machine image build tool](http://www.packer.io/). Templates for older operating systems (and older point releases for still-current OSes) are in `old_templates`.
 
 Templates that aren't quite functional are in `broken_templates`. These templates usually have problems with the key press sequence entered when the VM boots (meaning it's hard to get an automated OS install going), but otherwise are still functional (provisioning shell scripts still work, etc.).
 
