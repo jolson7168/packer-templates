@@ -50,3 +50,9 @@ output-vmware*
 #Ignore ISO files
 **/*.iso
 </pre>
+
+###Contributions/Acknowledgements
+
+####`windows-server-2008-r2-datacenter-amd64`
+
+The `Autounattend.xml` and the `openssh.ps1` and `win-updates.ps1` scripts are based on the scripts from [joefitzgerald/packer-windows](https://github.com/joefitzgerald/packer-windows). The rest of the scripts and `template.json` are converted from and based on the Windows templates in [jedi4ever/veewee](https://github.com/jedi4ever/veewee).
