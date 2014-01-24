@@ -234,18 +234,48 @@
                 -->
                 <!-- END WITHOUT WINDOWS UPDATES -->
                 <!-- WITH WINDOWS UPDATES -->
+                <!-- Install OpenSSH by running the  openssh.ps1 script-->
                 <SynchronousCommand wcm:action="add">
                     <CommandLine>cmd.exe /c C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File a:\openssh.ps1</CommandLine>
                     <Description>Install OpenSSH</Description>
                     <Order>99</Order>
                     <RequiresUserInput>true</RequiresUserInput>
                 </SynchronousCommand>
+                <!-- Install Windows updates  -->
                 <SynchronousCommand wcm:action="add">
                     <CommandLine>cmd.exe /c C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File a:\win-updates.ps1</CommandLine>
                     <Description>Install Windows Updates</Description>
                     <Order>100</Order>
                     <RequiresUserInput>true</RequiresUserInput>
                 </SynchronousCommand>
+                <!-- Run the base.ps1 script -->
+                <SynchronousCommand wcm:action="add">
+                    <CommandLine>cmd.exe /c C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File a:\base.ps1</CommandLine>
+                    <Description>Run the base configuration script</Description>
+                    <Order>101</Order>
+                    <RequiresUserInput>true</RequiresUserInput>
+                </SynchronousCommand>
+                <!-- Disable UAC by running the uac_disable.ps1 script-->
+                <SynchronousCommand wcm:action="add">
+                    <CommandLine>cmd.exe /c C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File a:\uac_disable.ps1</CommandLine>
+                    <Description>Disable UAC</Description>
+                    <Order>102</Order>
+                    <RequiresUserInput>true</RequiresUserInput>
+                </SynchronousCommand>
+								<!-- Set up the VM for vagrant-windows by running the vagrant-windows_setup.ps1 script-->
+                <SynchronousCommand wcm:action="add">
+                    <CommandLine>cmd.exe /c C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File a:\vagrant-windows_setup.ps1</CommandLine>
+                    <Description>Set up VM for the vagrant-windows plugin</Description>
+                    <Order>103</Order>
+                    <RequiresUserInput>true</RequiresUserInput>
+                </SynchronousCommand>   
+								<!-- Extend the actiavtion trial period by running the windows_activation_extend.ps1 script-->
+                <SynchronousCommand wcm:action="add">
+                    <CommandLine>cmd.exe /c C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File a:\windows_activation_extend.ps1</CommandLine>
+                    <Description>Extend the activation trial period</Description>
+                    <Order>104</Order>
+                    <RequiresUserInput>true</RequiresUserInput>
+                </SynchronousCommand>  
                 <!-- END WITH WINDOWS UPDATES -->
             </FirstLogonCommands>
             <ShowWindowsLive>false</ShowWindowsLive>
