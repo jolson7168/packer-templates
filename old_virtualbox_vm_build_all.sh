@@ -7,6 +7,14 @@ cd old_templates/
 cd ./debian-7.1-amd64
 packer build --only=virtualbox template.json
 
+#Debian 7.2
+cd ./debian-7.2-amd64
+packer build --only=virtualbox template.json
+
+#Debian 7.3
+cd ./debian-7.3-amd64
+packer build --only=virtualbox template.json
+
 #CentOS 6.4
 cd ../centos-6.4-amd64
 packer build --only=virtualbox template.json
