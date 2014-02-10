@@ -50,27 +50,6 @@
   ],
   "provisioners": [
     {
-      "type": "shell",
-      "scripts": [
-        "scripts/base.sh",
-        "scripts/vagrant.sh",
-        "scripts/virtualbox.sh",
-        "scripts/git.sh",
-        "scripts/zsh.sh",
-        "scripts/bash.sh",
-        "scripts/vim.sh",
-        "scripts/cleanup.sh"
-      ],
-      "override": {
-        "virtualbox-iso": {
-          "execute_command": "echo 'veewee'|sudo -S sh '{{.Path}}'"
-        },
-        "vmware-iso": {
-          "execute_command": "echo 'veewee'|sudo -S sh '{{.Path}}'"
-        }
-      }
-    },
-    {
       "type": "file",
       "source": "files/gitconfig",
       "destination": "/tmp/gitconfig"
@@ -109,6 +88,27 @@
       "type": "file",
       "source": "files/root_bash_profile",
       "destination": "/tmp/root_bash_profile"
+    },    
+    {
+      "type": "shell",
+      "scripts": [
+        "scripts/base.sh",
+        "scripts/vagrant.sh",
+        "scripts/virtualbox.sh",
+        "scripts/git.sh",
+        "scripts/zsh.sh",
+        "scripts/bash.sh",
+        "scripts/vim.sh",
+        "scripts/cleanup.sh"
+      ],
+      "override": {
+        "virtualbox-iso": {
+          "execute_command": "echo 'veewee'|sudo -S sh '{{.Path}}'"
+        },
+        "vmware-iso": {
+          "execute_command": "echo 'veewee'|sudo -S sh '{{.Path}}'"
+        }
+      }
     }
   ],
   "post-processors": [
