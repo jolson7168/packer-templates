@@ -62,25 +62,6 @@
   ],
   "provisioners": [
     {
-      "type": "shell",
-      "scripts": [
-        "scripts/build_time.sh",
-        "scripts/apt.sh",
-        "scripts/vbox.sh",
-        "scripts/sudo.sh",
-        "scripts/vagrant.sh",
-        "scripts/base.sh"
-      ],
-      "override": {
-        "virtualbox-iso": {
-          "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
-        },
-        "vmware-iso": {
-          "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
-        }
-      }
-    },
-    {
       "type": "file",
       "source": "files/gitconfig",
       "destination": "/tmp/gitconfig"
@@ -89,18 +70,6 @@
       "type": "file",
       "source": "files/gitignore_global",
       "destination": "/tmp/gitignore_global"
-    },
-    {
-      "type": "shell",
-      "script": "scripts/git.sh",
-      "override": {
-        "virtualbox-iso": {
-          "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
-        },
-        "vmware-iso": {
-          "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
-        }
-      }       
     },
     {
       "type": "file",
@@ -123,18 +92,6 @@
       "destination": "/tmp/vagrant-zshrc"
     },
     {
-      "type": "shell",
-      "script": "scripts/zsh.sh",
-      "override": {
-        "virtualbox-iso": {
-          "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
-        },
-        "vmware-iso": {
-          "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
-        }
-      }
-    },
-    {
       "type": "file",
       "source": "files/vagrant_bash_profile",
       "destination": "/tmp/vagrant_bash_profile"
@@ -146,7 +103,19 @@
     },
     {
       "type": "shell",
-      "script": "scripts/bash.sh",
+      "scripts": [
+        "scripts/build_time.sh",
+        "scripts/apt.sh",
+        "scripts/vbox.sh",
+        "scripts/sudo.sh",
+        "scripts/vagrant.sh",
+        "scripts/base.sh",
+        "scripts/git.sh",
+        "scripts/zsh.sh",
+        "scripts/bash.sh",
+        "scripts/vim.sh",
+        "scripts/cleanup.sh"
+      ],
       "override": {
         "virtualbox-iso": {
           "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
@@ -155,30 +124,6 @@
           "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
         }
       }
-    },
-    {
-      "type": "shell",
-      "script": "scripts/vim.sh",
-      "override": {
-        "virtualbox-iso": {
-          "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
-        },
-        "vmware-iso": {
-          "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
-        }
-      }
-    },
-    {
-      "type": "shell",
-      "script": "scripts/cleanup.sh",
-      "override": {
-        "virtualbox-iso": {
-          "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
-        },
-        "vmware-iso": {
-          "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
-        }
-      }      
     }
   ],
   "post-processors": [
