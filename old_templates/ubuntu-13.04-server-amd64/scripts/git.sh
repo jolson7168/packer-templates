@@ -17,5 +17,7 @@ rm -rf /tmp/git-1.9.0/ /tmp/git-1.9.0.tar.gz
 cp /tmp/gitconfig /home/vagrant/.gitconfig
 cp /tmp/gitignore_global /home/vagrant/.gitignore_global
 
+chown -R vagrant:vagrant /home/vagrant/
+
 cp /tmp/gitconfig /root/.gitconfig
 cp /tmp/gitignore_global /root/.gitignore_global

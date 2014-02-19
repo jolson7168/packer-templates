@@ -7,6 +7,8 @@ gem install rake
 echo "Installing Vim Janus for the 'vagrant' user..."
 cd /home/vagrant; curl -Lo- https://bit.ly/janus-bootstrap | bash
 
+chown -R vagrant:vagrant /home/vagrant/
+
 #Install Janus for the 'root' user (cd to root's homedir first so we're in the right spot for the script to run)
 echo "Installing Vim Janus for the 'root' user..."
 cd /root; curl -Lo- https://bit.ly/janus-bootstrap | bash

@@ -35,6 +35,8 @@ cd /home/vagrant/.oh-my-zsh/custom/plugins
 
 #cat the uploaded vagrant .zshrc into the /home/vagrant/.zshrc file
 cat /tmp/vagrant-zshrc > /home/vagrant/.zshrc
+
+chown -R vagrant:vagrant /home/vagrant/
 #cat in the uploaded ZSH theme
 cat /tmp/vagrant-zsh-theme.zsh-theme > /home/vagrant/.oh-my-zsh/themes/vagrant-zsh-theme.zsh-theme
 
