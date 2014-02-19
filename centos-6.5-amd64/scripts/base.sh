@@ -10,6 +10,11 @@ enabled=1
 gpgcheck=0
 EOM
 
+#Install the CentOS Software Collections repo. More info available here:
+# https://access.redhat.com/site/documentation/en-US/Red_Hat_Software_Collections/1/html-single/1.0_Release_Notes/index.html
+
+yum install centos-release-SCL
+
 yum -y check-update
 
 yum -y install gcc make gcc-c++ kernel-devel-`uname -r` zlib-devel openssl-devel readline-devel sqlite-devel perl wget dkms nfs-utils
