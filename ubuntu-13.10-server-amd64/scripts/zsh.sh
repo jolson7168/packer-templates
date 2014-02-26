@@ -55,8 +55,8 @@ echo "DEBIAN_PREVENT_KEYBOARD_CHANGES=yes" > /root/.zshenv
 #install oh-my-zsh first
 cd /root/; curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 #Make a folder for plugins like...
-mkdir -p /root/.oh-my-zsh/custom/plugins'
-cd /root/.oh-my-zsh/custom/plugins'
+mkdir -p /root/.oh-my-zsh/custom/plugins
+cd /root/.oh-my-zsh/custom/plugins
 #smarter history search
 cd /root/.oh-my-zsh/custom/plugins; git clone git://github.com/zsh-users/zsh-history-substring-search.git
 #syntax highlighting
