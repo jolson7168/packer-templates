@@ -7,4 +7,4 @@ apt-get -y install nfs-common
 apt-get -y install --no-install-recommends rake
 apt-get -y install tmux emacs nano curl vim tree htop smartmontools mosh inotify-tools zerofree software-properties-common ncdu unzip
 #Some metrics gathering tools
-apt-get -y install apachetop atop nmon dstat sysstat glances goaccess iotop
+apt-get -y install apachetop atop nmon dstat sysstat goaccess iotop
