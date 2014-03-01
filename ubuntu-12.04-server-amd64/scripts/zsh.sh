@@ -63,7 +63,7 @@ cd /root/.oh-my-zsh/custom/plugins; git clone git://github.com/zsh-users/zsh-his
 cd /root/.oh-my-zsh/custom/plugins; git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
 
 #cat the uploaded vagrant .zshrc into the /home/vagrant/.zshrc file
-cat /tmp/root-zshrc > /root/.zshrc'
+cat /tmp/root-zshrc > /root/.zshrc
 
 #cat in the uploaded ZSH theme
 cat /tmp/root-zsh-theme.zsh-theme > /root/.oh-my-zsh/themes/root-zsh-theme.zsh-theme
