@@ -27,7 +27,7 @@ echo "DEBIAN_PREVENT_KEYBOARD_CHANGES=yes" > /home/vagrant/.zshenv
 
 #install oh-my-zsh first
 cd /home/vagrant
-curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+su - vagrant -c 'curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh'
 
 #Make a folder for plugins like...
 mkdir -p /home/vagrant/.oh-my-zsh/custom/plugins
