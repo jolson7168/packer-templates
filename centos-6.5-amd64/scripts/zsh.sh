@@ -49,7 +49,6 @@ cd /home/vagrant/.rbenv/plugins;
 #Set ownership of the homedir incase any commands above set parts of it to root 
 chown -R vagrant:vagrant /home/vagrant/.rbenv/
 
-
 ##############################
 # root ZSH setup stuff
 ##############################

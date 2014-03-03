@@ -40,10 +40,11 @@ git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
 #cat the uploaded vagrant .zshrc into the /home/vagrant/.zshrc file
 cat /tmp/vagrant-zshrc > /home/vagrant/.zshrc
 
-chown -R vagrant:vagrant /home/vagrant/
-
 #cat in the uploaded ZSH theme
 cat /tmp/vagrant-zsh-theme.zsh-theme > /home/vagrant/.oh-my-zsh/themes/vagrant-zsh-theme.zsh-theme
+
+#Set ownership of the homedir incase any commands above set parts of it to root 
+chown -R vagrant:vagrant /home/vagrant/
 
 ##############################
 # root ZSH setup stuff
