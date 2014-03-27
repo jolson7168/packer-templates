@@ -71,6 +71,7 @@
         "./scripts/allow_pings.ps1",
         "./scripts/chef.bat",
         "./scripts/puppet.bat",
+        "./scripts/disable_password_expiration.bat",
         "./scripts/vagrant-ssh.bat",
         "./scripts/enable_winrm.bat"        
       ]
