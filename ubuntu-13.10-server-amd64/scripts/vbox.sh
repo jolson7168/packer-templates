@@ -15,5 +15,8 @@ mount -o loop $VBOX_ISO /mnt
 yes|sh /mnt/VBoxLinuxAdditions.run
 umount /mnt
 
+#Create a symlink to the VirtualBox guest additions manually as a workaround for: https://www.virtualbox.org/ticket/12879
+ln -s /opt/VBoxGuestAdditions-$VBOX_VERSION/lib/VBoxGuestAdditions /usr/lib/VBoxGuestAdditions
+
 # Cleanup
 rm $VBOX_ISO
