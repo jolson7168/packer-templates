@@ -54,7 +54,10 @@ cat /tmp/vagrant-zsh-theme.zsh-theme > /home/vagrant/.oh-my-zsh/themes/vagrant-z
 echo "DEBIAN_PREVENT_KEYBOARD_CHANGES=yes" > /root/.zshenv
 
 #install oh-my-zsh first
-cd /root/; curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+cd /root/
+#su - vagrant -c 'curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh'
+su - root -c 'git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh; cd ~/.oh-my-zsh; git checkout ca648ae7b1ca7cf2abbc63afde3c216994a71966'
+
 #Make a folder for plugins like...
 mkdir -p /root/.oh-my-zsh/custom/plugins
 cd /root/.oh-my-zsh/custom/plugins
