@@ -27,7 +27,7 @@
         "keyboard-configuration/modelcode=SKIP keyboard-configuration/layout=us keyboard-configuration/variant=us console-setup/ask_detect=false <wait>",
         "initrd=/install/initrd.gz -- <enter><wait>"
       ],
-      "boot_wait": "4s",
+      "boot_wait": "10s",
       "disk_size": 10140,
       "guest_os_type": "Ubuntu_64",
       "http_directory": "http",
@@ -67,7 +67,7 @@
         "keyboard-configuration/modelcode=SKIP keyboard-configuration/layout=us keyboard-configuration/variant=us console-setup/ask_detect=false <wait>",
         "initrd=/install/initrd.gz -- <enter><wait>"
       ],
-      "boot_wait": "4s",
+      "boot_wait": "10s",
       "disk_size": 10140,
       "guest_os_type": "ubuntu-64",
       "http_directory": "http",
