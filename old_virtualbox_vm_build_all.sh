@@ -8,15 +8,15 @@ cd ./debian-7.1-amd64
 packer build --only=virtualbox template.json
 
 #Debian 7.2
-cd ./debian-7.2-amd64
+cd ../debian-7.2-amd64
 packer build --only=virtualbox template.json
 
 #Debian 7.3
-cd ./debian-7.3-amd64
+cd ../debian-7.3-amd64
 packer build --only=virtualbox template.json
 
 #Debian 7.4
-cd ./debian-7.4-amd64
+cd ../debian-7.4-amd64
 packer build --only=virtualbox-iso template.json
 
 #CentOS 6.4
