@@ -1,7 +1,7 @@
 #!/bin/bash
 
-#Debian 7.3
-cd ./debian-7.4-amd64
+#Debian 7.5
+cd ./debian-7.5-amd64
 packer build --only=virtualbox-iso template.json
 
 #CentOS 6.5
