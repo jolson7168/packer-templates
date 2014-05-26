@@ -49,7 +49,23 @@
     }
   ],
   "provisioners": [
-   
+    {
+      "type": "shell",
+      "scripts": [
+        "scripts/base.sh",
+        "scripts/vagrant.sh",
+        "scripts/virtualbox.sh",
+        "scripts/cleanup.sh"
+      ],
+      "override": {
+        "virtualbox-iso": {
+          "execute_command": "echo 'veewee'|sudo -S sh '{{.Path}}'"
+        },
+        "vmware-iso": {
+          "execute_command": "echo 'veewee'|sudo -S sh '{{.Path}}'"
+        }
+      }
+    }
   ],
   "post-processors": [
     {
