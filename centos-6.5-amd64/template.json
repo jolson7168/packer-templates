@@ -93,6 +93,7 @@
       "type": "shell",
       "scripts": [
         "scripts/base.sh",
+        "scripts/yum.sh",
         "scripts/vagrant.sh",
         "scripts/virtualbox.sh",
         "scripts/git.sh",
