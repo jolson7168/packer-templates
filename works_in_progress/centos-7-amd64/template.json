@@ -96,10 +96,6 @@
         "scripts/yum.sh",
         "scripts/vagrant.sh",
         "scripts/virtualbox.sh",
-        "scripts/git.sh",
-        "scripts/zsh.sh",
-        "scripts/bash.sh",
-        "scripts/vim.sh",
         "scripts/cleanup.sh"
       ],
       "override": {
