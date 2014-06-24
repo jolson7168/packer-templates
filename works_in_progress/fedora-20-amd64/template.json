@@ -3,15 +3,15 @@
     {
       "type": "virtualbox-iso",
       "boot_command": [
-        "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<enter><wait>"
+        "<tab> linux text biosdevname=0 ks=http://{{ .HTTPIP }}:{{ .HTTPPort}}/ks.cfg<enter><enter>"
       ],
       "boot_wait": "10s",
       "disk_size": 65536,
       "guest_os_type": "RedHat_64",
       "http_directory": "http",
-      "iso_checksum": "bea5e951342a7ab0233219c3deb3b3acff023ea5dc67a9a4564a97a89364f192",
+      "iso_checksum": "cc0333be93c7ff2fb3148cb29360d2453f78913cc8aa6c6289ae6823372a77d2",
       "iso_checksum_type": "sha256",
-      "iso_url": "iso/rhel-server-7.0-x86_64-dvd.iso",
+      "iso_url": "http://download.fedoraproject.org/pub/fedora/linux/releases/20/Live/x86_64/Fedora-Live-Desktop-x86_64-20-1.iso",
       "ssh_username": "veewee",
       "ssh_password": "veewee",
       "ssh_port": 22,
@@ -27,15 +27,15 @@
     {
       "type": "vmware-iso",
       "boot_command": [
-        "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<enter><wait>"
+        "<tab> linux ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg text<enter><wait>"
       ],
       "boot_wait": "10s",
       "disk_size": 65536,
       "guest_os_type": "RedHat_64",
       "http_directory": "http",
-      "iso_checksum": "bea5e951342a7ab0233219c3deb3b3acff023ea5dc67a9a4564a97a89364f192",
+      "iso_checksum": "cc0333be93c7ff2fb3148cb29360d2453f78913cc8aa6c6289ae6823372a77d2",
       "iso_checksum_type": "sha256",
-      "iso_url": "iso/rhel-server-7.0-x86_64-dvd.iso",
+      "iso_url": "http://download.fedoraproject.org/pub/fedora/linux/releases/20/Live/x86_64/Fedora-Live-Desktop-x86_64-20-1.iso",
       "ssh_username": "veewee",
       "ssh_password": "veewee",
       "ssh_port": 22,
