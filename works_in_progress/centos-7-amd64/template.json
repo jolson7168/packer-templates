@@ -3,15 +3,15 @@
     {
       "type": "virtualbox-iso",
       "boot_command": [
-        "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<enter><wait><wait><wait><wait><wait><wait><wait>"
+        "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<enter><wait>"
       ],
       "boot_wait": "45s",
       "disk_size": 65536,
       "guest_os_type": "RedHat_64",
       "http_directory": "http",
-      "iso_checksum": "27ae5170b85576e632ed91eac54c136bb00c4084ea294365b93fc0f734810fb5",
+      "iso_checksum": "53fb53796b93ab6002af56ab48c85299d729e6d2db3957d2d4793e0d4a76b35e",
       "iso_checksum_type": "sha256",
-      "iso_url": "http://buildlogs.centos.org/centos/7/isos/x86_64/livecd-centos-7-livecd-201406190204.iso",
+      "iso_url": "http://mirrors.cat.pdx.edu/centos/7/isos/x86_64/CentOS-7.0-1406-x86_64-NetInstall.iso",
       "ssh_username": "veewee",
       "ssh_password": "veewee",
       "ssh_port": 22,
@@ -33,9 +33,9 @@
       "disk_size": 65536,
       "guest_os_type": "RedHat_64",
       "http_directory": "http",
-      "iso_checksum": "27ae5170b85576e632ed91eac54c136bb00c4084ea294365b93fc0f734810fb5",
+      "iso_checksum": "53fb53796b93ab6002af56ab48c85299d729e6d2db3957d2d4793e0d4a76b35e",
       "iso_checksum_type": "sha256",
-      "iso_url": "http://buildlogs.centos.org/centos/7/isos/x86_64/livecd-centos-7-livecd-201406190204.iso",
+      "iso_url": "http://mirrors.cat.pdx.edu/centos/7/isos/x86_64/CentOS-7.0-1406-x86_64-NetInstall.iso",
       "ssh_username": "veewee",
       "ssh_password": "veewee",
       "ssh_port": 22,
