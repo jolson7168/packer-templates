@@ -15,10 +15,14 @@ yum install centos-release-SCL
 
 yum -y check-update
 
-yum -y install gcc make gcc-c++ kernel-devel-`uname -r` zlib-devel openssl-devel readline-devel sqlite-devel perl wget dkms nfs-utils
+yum -y install gcc make gcc-c++ kernel-devel-`uname -r` zlib-devel openssl-devel readline-devel sqlite-devel perl wget dkms nfs-utils pcre-devel pcre
 
 #more packages
-yum -y install man nc vim nano emacs tmux htop tree lsof curl wget screen telnet mailx unzip yum-utils rsync ncdu mosh ccze pv rlwrap
+yum -y install man nc vim nano emacs tmux htop tree lsof curl wget screen telnet mailx unzip yum-utils rsync ncdu mosh pv rlwrap
+
+#Packages that can't be installed:
+
+# ccze - missing libpcre.so.0()(64bit)
 
 #Some metrics gathering tools
 #yum -y install apachetop atop dstat sysstat glances iotop smartmontools
