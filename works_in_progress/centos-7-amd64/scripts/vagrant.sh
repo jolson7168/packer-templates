@@ -9,7 +9,7 @@ echo "vagrant        ALL=(ALL)       NOPASSWD: ALL" >> /etc/sudoers.d/vagrant
 chmod 0440 /etc/sudoers.d/vagrant
 
 # Installing vagrant keys
-mkdir -pm 700 /home/vagrant/.ssh
+mkdir -pm 700 /home/vagrant/.ssh && echo "created Vagrant user homedir!"
 wget --no-check-certificate 'https://raw.github.com/mitchellh/vagrant/master/keys/vagrant.pub' -O /home/vagrant/.ssh/authorized_keys
 chmod 0600 /home/vagrant/.ssh/authorized_keys
 chown -R vagrant /home/vagrant/.ssh
