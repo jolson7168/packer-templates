@@ -111,7 +111,7 @@
   "post-processors": [
     {
       "type": "vagrant",
-      "output": "packer_centos-7-amd64_{{.Provider}}.box"
+      "output": "packer_centos-7.0-amd64_{{.Provider}}.box"
     }
   ]
 }
