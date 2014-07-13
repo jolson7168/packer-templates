@@ -8,3 +8,6 @@ sh /mnt/VBoxLinuxAdditions.run
 umount /mnt
 #Remove the guest additions ISO so it doesn't take up space in the finished base box:
 rm -rf /home/veewee/VBoxGuestAdditions.iso
+
+#Link the net-name-slot.rules file to /dev/null so we get eth0, eth1, etc. for ethernet device names:
+ln -s /dev/null /etc/udev/rules.d/80-net-name-slot.rules
