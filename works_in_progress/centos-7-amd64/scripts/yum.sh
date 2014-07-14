@@ -23,7 +23,7 @@ yum -y install man nc vim nano emacs tmux htop tree lsof curl wget screen telnet
 # ccze - missing libpcre.so.0()(64bit)
 
 #Some metrics gathering tools
-#yum -y install apachetop atop dstat sysstat glances iotop smartmontools
+yum -y install apachetop atop dstat sysstat glances iotop smartmontools
 
 #Install ag
 #rpm -Uvhi http://swiftsignal.com/packages/centos/6/x86_64/the-silver-searcher-0.14-1.el6.x86_64.rpm
