@@ -16,7 +16,7 @@ yum -y check-update
 yum -y install gcc make gcc-c++ kernel-devel-`uname -r` zlib-devel openssl-devel readline-devel sqlite-devel perl wget dkms nfs-utils pcre-devel pcre
 
 #more packages
-yum -y install man nc vim nano emacs tmux htop tree lsof curl wget screen telnet mailx unzip yum-utils rsync ncdu mosh pv rlwrap
+yum -y install man nc vim nano emacs tmux htop tree lsof curl wget screen telnet mailx unzip yum-utils ccze rsync ncdu mosh pv rlwrap
 
 #Packages that can't be installed:
 
