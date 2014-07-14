@@ -1,18 +1,16 @@
 #Yum and RPM package installations
 
-cat > /etc/yum.repos.d/epel.repo << EOM
-[epel]
-name=epel
-baseurl=http://download.fedoraproject.org/pub/epel/6/\$basearch
-enabled=1
-gpgcheck=0
-EOM
+#Install the EPEL 7 beta:
+rpm -Uvhi http://dl.fedoraproject.org/pub/epel/beta/7/x86_64/epel-release-7-0.2.noarch.rpm
 
 #Install the CentOS Software Collections repo. More info available here:
 # https://access.redhat.com/site/documentation/en-US/Red_Hat_Software_Collections/1/html-single/1.0_Release_Notes/index.html
+#We'll install this later when they have a version ready for CentOS 7:
 
-yum install centos-release-SCL
+#yum install centos-release-SCL
 
+#Clean yum and then update it to get new package lists from EPEL:
+yum clean all
 yum -y check-update
 
 yum -y install gcc make gcc-c++ kernel-devel-`uname -r` zlib-devel openssl-devel readline-devel sqlite-devel perl wget dkms nfs-utils pcre-devel pcre
