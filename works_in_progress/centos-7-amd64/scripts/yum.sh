@@ -25,5 +25,20 @@ yum -y install man nc vim nano emacs tmux htop tree lsof curl wget screen telnet
 #Some metrics gathering tools
 yum -y install apachetop atop dstat sysstat glances iotop smartmontools
 
-#Install ag
-#rpm -Uvhi http://swiftsignal.com/packages/centos/6/x86_64/the-silver-searcher-0.14-1.el6.x86_64.rpm
+#Ag installation: https://github.com/ggreer/the_silver_searcher
+
+#Install some prereqs:
+yum -y groupinstall "Development Tools" 
+yum -y install pcre-devel xz-devel
+
+#Download a release tarball:
+cd /tmp
+wget https://github.com/ggreer/the_silver_searcher/archive/0.23.0.tar.gz
+tar zxvf 0.23.0.tar.gz 
+cd the_silver_searcher-0.23.0
+./build.sh
+make install
+
+#Remove the prereqs to save space:
+yum -y groupremove "Development Tools" 
+yum -y remove pcre-devel xz-devel
