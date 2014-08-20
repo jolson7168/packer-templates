@@ -18,5 +18,5 @@ umount /mnt
 #Create a symlink to the VirtualBox guest additions manually as a workaround for: https://www.virtualbox.org/ticket/12879
 ln -s /opt/VBoxGuestAdditions-$VBOX_VERSION/lib/VBoxGuestAdditions /usr/lib/VBoxGuestAdditions
 
-# Cleanup
+#Remove the guest additions ISO so it doesn't take up space in the finished base box:
 rm $VBOX_ISO
