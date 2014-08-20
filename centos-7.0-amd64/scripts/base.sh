@@ -10,6 +10,5 @@ systemctl disable iptables
 systemctl stop firewalld
 systemctl disable firewalld
 
-
 #Don't do reverse DNS lookups of SSH clients that connect; this usually speeds up SSH by quite a bit:
 echo "UseDNS no" >> /etc/ssh/sshd_config
