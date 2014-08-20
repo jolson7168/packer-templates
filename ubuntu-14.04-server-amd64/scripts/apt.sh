@@ -3,11 +3,11 @@
 #Enable the progress bar:
 echo 'Dpkg::Progress-Fancy "1";' > /etc/apt/apt.conf.d/99progressbar
 
-apt-get -y install linux-headers-$(uname -r) build-essential
-apt-get -y install zlib1g-dev libssl-dev libreadline-gplv2-dev libyaml-dev
-apt-get -y install dkms
-apt-get -y install nfs-common
+apt-get -y install --no-install-recommends linux-headers-$(uname -r) build-essential
+apt-get -y install --no-install-recommends zlib1g-dev libssl-dev libreadline-gplv2-dev libyaml-dev
+apt-get -y install --no-install-recommends dkms
+apt-get -y install --no-install-recommends nfs-common
 apt-get -y install --no-install-recommends rake
-apt-get -y install tmux emacs nano curl vim tree htop smartmontools mosh inotify-tools zerofree software-properties-common ncdu silversearcher-ag unzip ccze pv pigz rlwrap
+apt-get -y install --no-install-recommends tmux emacs nano curl vim tree htop smartmontools mosh inotify-tools zerofree software-properties-common ncdu silversearcher-ag unzip ccze pv pigz rlwrap
 #Some metrics gathering tools
-apt-get -y install apachetop atop nmon dstat sysstat glances goaccess iotop
+apt-get -y install --no-install-recommends apachetop atop nmon dstat sysstat glances goaccess iotop
