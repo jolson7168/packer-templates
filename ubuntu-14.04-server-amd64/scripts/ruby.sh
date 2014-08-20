@@ -1,5 +1,5 @@
 #!/bin/sh -x
-apt-get -y install libyaml-0-2
+apt-get -y install --no-install-recommends libyaml-0-2
 RUBY_VERSION=1.9.3-p392
 
 cd /tmp
