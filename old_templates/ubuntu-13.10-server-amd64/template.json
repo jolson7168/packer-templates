@@ -106,7 +106,7 @@
       "scripts": [
         "scripts/build_time.sh",
         "scripts/apt.sh",
-        "scripts/vbox.sh",
+        "scripts/virtualbox.sh",
         "scripts/sudo.sh",
         "scripts/vagrant.sh",
         "scripts/base.sh",
