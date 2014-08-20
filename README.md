@@ -53,7 +53,9 @@ output-vmware*
 
 ###Notes about specific templates
 
-Coming soon...
+####centos-7.0-amd64
+
+For the CentOS 7 template, VirtualBox version **4.3.14** or higher is required. Guest additions with older versions of VirtualBox can't be compiled properly on CentOS 7.
 
 ###Contributions/Acknowledgements
 
