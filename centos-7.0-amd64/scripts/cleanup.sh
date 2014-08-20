@@ -1,3 +1,9 @@
+#Remove old kernels
+#Install yum-utils so we have the package-cleanup command available:
+yum -y install yum-utils
+#Use package-cleanup to delete old kernels and leave 1 old kernel (at the most) installed:
+package-cleanup -y --oldkernels --count=1
+
 yum -y erase gtk2 libX11 hicolor-icon-theme avahi freetype bitstream-vera-fonts
 yum -y clean all
 #rm -rf /etc/yum.repos.d/{puppetlabs,epel}.repo
