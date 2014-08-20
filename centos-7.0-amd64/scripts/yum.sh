@@ -23,7 +23,7 @@ yum -y install man nc vim nano emacs tmux htop tree lsof curl wget screen telnet
 # ccze - missing libpcre.so.0()(64bit)
 
 #Some metrics gathering tools
-yum -y install apachetop atop dstat sysstat glances iotop smartmontools
+yum -y install apachetop dstat sysstat iotop smartmontools
 
 #Ag installation: https://github.com/ggreer/the_silver_searcher
 
