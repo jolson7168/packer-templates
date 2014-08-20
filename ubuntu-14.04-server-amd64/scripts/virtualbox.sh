@@ -19,4 +19,4 @@ umount /mnt
 ln -s /opt/VBoxGuestAdditions-$VBOX_VERSION/lib/VBoxGuestAdditions /usr/lib/VBoxGuestAdditions
 
 #Remove the guest additions ISO so it doesn't take up space in the finished base box:
-rm $VBOX_ISO
+rm -rf /home/vagrant/VBoxGuestAdditions_*.iso
