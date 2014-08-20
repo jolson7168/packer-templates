@@ -6,7 +6,7 @@ output-virtualbox*
 output-vmware*
 
 #Ignore Vagrant base boxes that are made
-*.box
+*.box*
 *.box.*
 
 #Ignore RPM and DEB packages and ZIP files that are used in the file provisioners
