@@ -51,6 +51,10 @@ output-vmware*
 **/*.iso
 </pre>
 
+###Notes about specific templates
+
+Coming soon...
+
 ###Contributions/Acknowledgements
 
 ####`windows-server-2008-r2-datacenter-amd64`
