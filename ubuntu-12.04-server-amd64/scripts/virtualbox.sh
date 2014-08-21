@@ -1,5 +1,5 @@
 # Without libdbus virtualbox would not start automatically after compile
-apt-get -y install --no-install-recommends libdbus-1-3
+apt-get -y install libdbus-1-3
 
 # The netboot installs the VirtualBox support (old) so we have to remove it
 /etc/init.d/virtualbox-ose-guest-utils stop
