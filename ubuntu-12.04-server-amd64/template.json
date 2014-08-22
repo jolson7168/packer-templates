@@ -113,8 +113,19 @@
     },    
     {
       "type": "shell",
-      "only": ["virtualbox-iso"],
-      "script": "scripts/virtualbox.sh",
+      "only": ["virtualbox-iso"],  
+      "scripts": [
+        "scripts/base.sh",
+        "scripts/apt.sh",
+        "scripts/vagrant.sh",
+        "scripts/virtualbox.sh",
+        "scripts/git.sh",
+        "scripts/zsh.sh",
+        "scripts/vim.sh",
+        "scripts/bash.sh",
+        "scripts/cleanup.sh",
+        "scripts/zerodisk.sh"        
+      ],
       "override": {
         "virtualbox-iso": {
           "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
@@ -127,28 +138,17 @@
     {
       "type": "shell",
       "only": ["vmware-iso"],
-      "script": "scripts/vmfusion.sh",
-      "override": {
-        "virtualbox-iso": {
-          "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
-        },
-        "vmware-iso": {
-          "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
-        }
-      }
-    },
-    {
-      "type": "shell",
       "scripts": [
         "scripts/base.sh",
         "scripts/vagrant.sh",
         "scripts/apt.sh",
+        "scripts/vmfusion.sh",
         "scripts/git.sh",
         "scripts/zsh.sh",
         "scripts/vim.sh",
         "scripts/bash.sh",
         "scripts/cleanup.sh",
-        "scripts/zerodisk.sh"        
+        "scripts/zerodisk.sh"
       ],
       "override": {
         "virtualbox-iso": {
