@@ -1,4 +1,12 @@
 #!/bin/sh -x
+
+#Clean out apt and re-update it so we have the most recent package and repo lists:
+apt-get -y clean
+apt-get -y autoclean
+apt-get -y remove
+apt-get -y autoremove
+apt-get -y update
+
 apt-get -y install linux-headers-$(uname -r) build-essential
 apt-get -y install zlib1g-dev libssl-dev libreadline-gplv2-dev libyaml-dev
 apt-get -y install dkms
