@@ -13,7 +13,7 @@ rpm -Uvhi http://dl.fedoraproject.org/pub/epel/beta/7/x86_64/epel-release-7-0.2.
 yum clean all
 yum -y check-update
 
-yum -y install gcc make gcc-c++ kernel-devel-`uname -r` zlib-devel openssl-devel readline-devel sqlite-devel perl wget dkms nfs-utils pcre-devel pcre
+yum -y install gcc make gcc-c++ kernel-devel-`uname -r` zlib-devel openssl-devel readline-devel sqlite-devel perl wget dkms nfs-utils pcre-devel pcre net-tools
 
 #more packages
 yum -y install man nc vim nano emacs tmux htop tree lsof curl wget screen telnet mailx unzip yum-utils ccze rsync ncdu mosh pv rlwrap
