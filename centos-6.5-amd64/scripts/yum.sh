@@ -6,7 +6,7 @@ yum -y install epel-release
 #Install the CentOS Software Collections repo. More info available here:
 # https://access.redhat.com/site/documentation/en-US/Red_Hat_Software_Collections/1/html-single/1.0_Release_Notes/index.html
 
-yum install centos-release-SCL
+yum -y install centos-release-SCL
 
 yum -y check-update
 
