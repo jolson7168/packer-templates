@@ -1,7 +1,7 @@
 #Yum and RPM package installations
 
-#Install the EPEL 7 beta:
-rpm -Uvhi http://dl.fedoraproject.org/pub/epel/beta/7/x86_64/epel-release-7-0.2.noarch.rpm
+#Install EPEL 7:
+yum -y install epel-release
 
 #Install the CentOS Software Collections repo. More info available here:
 # https://access.redhat.com/site/documentation/en-US/Red_Hat_Software_Collections/1/html-single/1.0_Release_Notes/index.html

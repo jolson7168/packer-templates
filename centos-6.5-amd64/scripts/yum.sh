@@ -1,12 +1,7 @@
 #Yum and RPM package installations
 
-cat > /etc/yum.repos.d/epel.repo << EOM
-[epel]
-name=epel
-baseurl=http://download.fedoraproject.org/pub/epel/6/\$basearch
-enabled=1
-gpgcheck=0
-EOM
+#Install EPEL:
+yum -y install epel-release
 
 #Install the CentOS Software Collections repo. More info available here:
 # https://access.redhat.com/site/documentation/en-US/Red_Hat_Software_Collections/1/html-single/1.0_Release_Notes/index.html
