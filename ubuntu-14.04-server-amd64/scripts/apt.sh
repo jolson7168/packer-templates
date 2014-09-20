@@ -8,6 +8,6 @@ apt-get -y install --no-install-recommends zlib1g-dev libssl-dev libreadline-gpl
 apt-get -y install --no-install-recommends dkms
 apt-get -y install --no-install-recommends nfs-common
 apt-get -y install --no-install-recommends rake
-apt-get -y install --no-install-recommends tmux emacs nano curl vim tree htop smartmontools mosh inotify-tools zerofree software-properties-common ncdu silversearcher-ag unzip ccze pv pigz rlwrap
+apt-get -y install --no-install-recommends tmux nano curl vim tree htop smartmontools mosh inotify-tools zerofree software-properties-common ncdu silversearcher-ag unzip ccze pv pigz rlwrap
 #Some metrics gathering tools
 apt-get -y install --no-install-recommends apachetop atop nmon dstat sysstat glances goaccess iotop

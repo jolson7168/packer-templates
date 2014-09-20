@@ -13,7 +13,7 @@ yum -y check-update
 yum -y install gcc make gcc-c++ kernel-devel-`uname -r` zlib-devel openssl-devel readline-devel sqlite-devel perl wget dkms nfs-utils
 
 #more packages
-yum -y install man nc vim nano emacs tmux htop tree lsof curl wget screen telnet mailx unzip yum-utils rsync ncdu mosh ccze pv rlwrap
+yum -y install man nc vim nano tmux htop tree lsof curl wget screen telnet mailx unzip yum-utils rsync ncdu mosh ccze pv rlwrap
 
 #Some metrics gathering tools
 yum -y install apachetop atop dstat sysstat glances iotop smartmontools

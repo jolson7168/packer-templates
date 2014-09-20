@@ -19,7 +19,7 @@ chkconfig iptables off
 service iptables stop
 
 #more packages
-yum -y install man nc vim nano emacs tmux htop tree lsof curl wget screen telnet mailx unzip yum-utils rsync ncdu mosh
+yum -y install man nc vim nano tmux htop tree lsof curl wget screen telnet mailx unzip yum-utils rsync ncdu mosh
 
 #Some metrics gathering tools
 yum -y install apachetop atop dstat sysstat glances
