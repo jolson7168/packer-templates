@@ -62,3 +62,7 @@ For the CentOS 7 template, VirtualBox version **4.3.14** or higher is required. 
 ####`windows-server-2008-r2-datacenter-amd64`
 
 The `Autounattend.xml` and the `openssh.ps1` and `win-updates.ps1` scripts are based on the scripts from [joefitzgerald/packer-windows](https://github.com/joefitzgerald/packer-windows). The rest of the scripts and `template.json` are converted from and based on the Windows templates in [jedi4ever/veewee](https://github.com/jedi4ever/veewee).
+
+####`freebsd-10.0-amd64`
+
+The `freebsd-10.0-amd64`template is based on the [Opscode Bento FreeBSD Packer template](https://github.com/opscode/bento)
