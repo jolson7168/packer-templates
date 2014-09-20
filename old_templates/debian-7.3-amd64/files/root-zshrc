@@ -87,16 +87,16 @@ alias tmuxa="tmux attach-session"
 
 #system file editing shortcuts
 #hosts file
-alias edithosts="sudo emacs /etc/hosts"
+alias edithosts="sudo vim /etc/hosts"
 
 #SSH config
-alias editsshconfig="emacs ~/.ssh/config"
+alias editsshconfig="vim ~/.ssh/config"
 
 #system file editing shortcuts
 #hosts file
 alias edithosts="sudo nano /etc/hosts"
 #SSH config
-alias editsshconfig="emacs ~/.ssh/config"
+alias editsshconfig="vim ~/.ssh/config"
 
 #system shutdown and startup commands
 alias shutdown="sudo shutdown -h now"
