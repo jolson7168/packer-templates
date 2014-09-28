@@ -4,9 +4,9 @@
 # ZSH installation
 ##############################
 cd /tmp
-wget http://sourceforge.net/projects/zsh/files/zsh/5.0.5/zsh-5.0.5.tar.gz
-tar zxvf zsh-5.0.5.tar.gz
-cd zsh-5.0.5
+wget http://sourceforge.net/projects/zsh/files/zsh/5.0.6/zsh-5.0.6.tar.gz
+tar zxvf zsh-5.0.6.tar.gz
+cd zsh-5.0.6
 ./configure
 sudo make
 sudo make install
@@ -16,7 +16,7 @@ chsh -s `which zsh` vagrant
 chsh -s `which zsh` root
 
 #Remove the tarball and tarball extract so they don't take up space in the final, packaged VM
-rm -rf /tmp/zsh-5.0.5/ /tmp/zsh-5.0.5.tar.gz
+rm -rf /tmp/zsh-5.0.6/ /tmp/zsh-5.0.6.tar.gz
 
 ##############################
 # Vagrant ZSH setup stuff
