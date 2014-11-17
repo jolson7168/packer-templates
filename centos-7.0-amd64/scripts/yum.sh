@@ -27,18 +27,4 @@ yum -y install apachetop dstat sysstat iotop smartmontools
 
 #Ag installation: https://github.com/ggreer/the_silver_searcher
 
-#Install some prereqs:
-yum -y groupinstall "Development Tools" 
-yum -y install pcre-devel xz-devel
-
-#Download a release tarball:
-cd /tmp
-wget https://github.com/ggreer/the_silver_searcher/archive/0.23.0.tar.gz
-tar zxvf 0.23.0.tar.gz 
-cd the_silver_searcher-0.23.0
-./build.sh
-make install
-
-#Remove the prereqs to save space:
-yum -y groupremove "Development Tools" 
-yum -y remove pcre-devel xz-devel
+yum -y install the_silver_searcher
