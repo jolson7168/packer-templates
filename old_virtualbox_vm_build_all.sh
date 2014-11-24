@@ -31,6 +31,10 @@ packer build --only=virtualbox-iso template.json
 cd ../centos-6.4-amd64
 packer build --only=virtualbox template.json
 
+#CentOS 6.5
+cd ../centos-6.5-amd64
+packer build --only=virtualbox centos-6.5-amd64.json
+
 #Ubuntu 12.10
 cd ../ubuntu-12.10-server-amd64
 packer build --only=virtualbox template.json

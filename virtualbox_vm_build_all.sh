@@ -5,8 +5,8 @@ cd ./debian-7.7-amd64
 packer build --only=virtualbox-iso debian-7.7-amd64.json
 
 #CentOS 6.5
-cd ../centos-6.5-amd64
-packer build --only=virtualbox-iso centos-6.5-amd64.json
+cd ../centos-6.6-amd64
+packer build --only=virtualbox-iso centos-6.6-amd64.json
 
 #CentOS 7.0
 cd ../centos-7.0-amd64
