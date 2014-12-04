@@ -13,7 +13,7 @@ yum -y install epel-release
 yum clean all
 yum -y check-update
 
-yum -y install gcc make gcc-c++ kernel-devel-`uname -r` zlib-devel openssl-devel readline-devel sqlite-devel perl wget dkms nfs-utils pcre-devel pcre net-tools
+yum -y install gcc make gcc-c++ kernel-devel-`uname -r` zlib-devel openssl-devel readline-devel sqlite-devel perl wget dkms nfs-utils pcre-devel pcre net-tools bzip2
 
 #more packages
 yum -y install man nc vim nano tmux htop tree lsof curl wget screen telnet mailx unzip yum-utils ccze rsync ncdu mosh pv rlwrap
