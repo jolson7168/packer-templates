@@ -129,7 +129,7 @@
   "post-processors": [
     {
       "type": "vagrant",
-      "output": "packer_ubuntu-14.04-server-amd64_{{.Provider}}.box"
+      "output": "packer_ubuntu-14.10-server-amd64_{{.Provider}}.box"
     }
   ]
 }
