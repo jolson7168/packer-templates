@@ -16,7 +16,7 @@ yum -y install gcc make gcc-c++ kernel-devel-`uname -r` zlib-devel openssl-devel
 yum -y install man nc vim nano tmux htop tree lsof curl wget screen telnet mailx unzip yum-utils rsync ncdu mosh ccze pv rlwrap
 
 #Some metrics gathering tools
-yum -y install apachetop atop dstat sysstat glances iotop smartmontools
+yum -y install apachetop atop dstat sysstat  iotop smartmontools
 
 #Install ag
 rpm -Uvhi http://swiftsignal.com/packages/centos/6/x86_64/the-silver-searcher-0.14-1.el6.x86_64.rpm

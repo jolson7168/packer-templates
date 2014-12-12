@@ -15,7 +15,7 @@ apt-get -y install rake
 apt-get -y install tmux nano curl vim tree htop smartmontools mosh inotify-tools zerofree software-properties-common ncdu unzip pv
 
 #Some metrics gathering tools
-apt-get -y install apachetop atop nmon dstat sysstat glances goaccess iotop
+apt-get -y install apachetop atop nmon dstat sysstat  goaccess iotop
 
 #Install ag
 cd /tmp
