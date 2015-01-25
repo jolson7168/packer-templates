@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#Debian 7.7
-cd ./debian-7.7-amd64
-packer build --only=virtualbox-iso debian-7.7-amd64.json
+#Debian 7.8
+cd ./debian-7.8-amd64
+packer build --only=virtualbox-iso debian-7.8-amd64.json
 
 #CentOS 6.5
 cd ../centos-6.6-amd64

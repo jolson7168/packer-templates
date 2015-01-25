@@ -27,6 +27,10 @@ packer build --only=virtualbox-iso template.json
 cd ../debian-7.6-amd64
 packer build --only=virtualbox-iso template.json
 
+#Debian 7.7
+cd ../debian-7.7-amd64
+packer build --only=virtualbox-iso debian-7.7-amd64.json
+
 #CentOS 6.4
 cd ../centos-6.4-amd64
 packer build --only=virtualbox template.json
