@@ -143,7 +143,7 @@
   "post-processors": [
     {
       "type": "vagrant",
-      "output": "packer_debian-7.7-amd64_{{.Provider}}.box"
+      "output": "packer_debian-7.8-amd64_{{.Provider}}.box"
     }
   ]
 }
