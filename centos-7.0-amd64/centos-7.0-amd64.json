@@ -30,20 +30,20 @@
       ],
       "boot_wait": "15s",
       "disk_size": 65536,
-      "guest_os_type": "RedHat_64",
+      "guest_os_type": "Centos-64",
       "http_directory": "http",
       "iso_checksum": "04e99a4f1a013b95a7ebc9a90ffa9ac64d28eb9872bc193fbd7c581ec9b6a360",
       "iso_checksum_type": "sha256",
-      "iso_url": "http://mirrors.cat.pdx.edu/centos/7.0.1406/isos/x86_64/CentOS-7.0-1406-x86_64-Minimal.iso",
+      "iso_url": "/media/USB4/Virtual Machines/isos/CentOS-7.0-1406-x86_64-Minimal.iso",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_port": 22,
       "ssh_wait_timeout": "10000s",
       "shutdown_command": "echo '/sbin/halt -h -p' > shutdown.sh; echo 'vagrant'|sudo -S sh 'shutdown.sh'",
       "vmx_data": {
-        "memsize": "512",
+        "memsize": "2048",
         "numvcpus": "1",
-        "cpuid.coresPerSocket": "1"
+        "cpuid.coresPerSocket": "2"
       }
     }
   ],
@@ -109,12 +109,6 @@
           "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
         }
       }
-    }
-  ],
-  "post-processors": [
-    {
-      "type": "vagrant",
-      "output": "packer_centos-7.0-amd64_{{.Provider}}.box"
     }
   ]
 }
